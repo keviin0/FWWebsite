@@ -73,6 +73,7 @@
                 textSpan.style.fontFamily = fonts[fontIndex % fonts.length];
                 redSpan.style.fontFamily = fonts[fontIndex % fonts.length];
                 greySpan.style.fontFamily = fonts[fontIndex % fonts.length];
+                ++fontIndex;
                 if (++fontIndex > fonts.length * 2) {
                     const progressSpan = document.getElementById("progress-bar");
                     const introWrapperSpan = document.getElementById("intro-wrapper");
@@ -103,15 +104,13 @@
             return width;
         }
         
-        document.addEventListener('DOMContentLoaded', () => {
-            const noTextElement = document.getElementById('no-text');
-            const inputCursor = document.querySelector('.input-cursor');
+        const noTextElement = document.getElementById('no-text');
+        const inputCursor = document.querySelector('.input-cursor');
 
-            const sampleText = noTextElement.textContent || noTextElement.innerText;
-            const averageCharWidth = getCharacterWidth(sampleText, noTextElement) / sampleText.length;
+        const sampleText = noTextElement.textContent || noTextElement.innerText;
+        const averageCharWidth = getCharacterWidth(sampleText, noTextElement) / sampleText.length;
 
-            inputCursor.style.width = `${averageCharWidth}px`;
-        });
+        inputCursor.style.width = `${averageCharWidth}px`;
 
         window.addEventListener('resize', () => {
             if (!introPlayed)
@@ -139,9 +138,9 @@
                 const pbComputedStyle = getComputedStyle(progressBar);
                 const height = parseFloat(pbComputedStyle.getPropertyValue("--height")) || 0;
                 if (height == 100) {
-                clearInterval(interval);
-                transition();
-                introPlayed = true;
+                    clearInterval(interval);
+                    transition();
+                    introPlayed = true;
                 }
                 if (skip) { velocity *= 1.5; }
                 progressBar.style.setProperty('--height', Math.min(height + velocity/200, 100));
@@ -212,6 +211,55 @@
 
 <style>
     @import "../../../styles/components/Intro.css";
+
+    @keyframes -global-blink {
+        0% {opacity: 0;}
+        40% {opacity: 0;}
+        60% {opacity: 1;}
+        100% {opacity: 1;}
+    }
+
+    @keyframes -global-glitch-grey {
+        2%,
+        64% {
+            transform: translate(-42%, -56%) skew(0deg);
+        }
+        4%,
+        60% {
+            transform: translate(-52%, -50%) skew(0deg);
+        }
+        62% {
+            transform: translate(-50%, -50%) skew(5deg);
+        }
+    }
+
+    @keyframes -global-glitch-red {
+        2%,
+        64% {
+            transform: translate(-54%, -44%) skew(0deg);
+        }
+        4%,
+        60% {
+            transform: translate(-52%, -50%) skew(0deg);
+        }
+        62% {
+            transform: translate(-50%, -50%) skew(5deg);
+        }
+    }
+
+    @keyframes -global-glitch {
+        2%,
+        64% {
+            transform: translate(-48%, -50%) skew(0deg);
+        }
+        4%,
+        60% {
+            transform: translate(-52%, -50%) skew(0deg);
+        }
+        62% {
+            transform: translate(-50%, -50%) skew(5deg);
+        }
+    }
 </style>
 
 {#if !animationFinished}
