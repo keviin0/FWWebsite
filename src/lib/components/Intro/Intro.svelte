@@ -9,7 +9,7 @@
     });
 
     onMount(() => {
-        let velocity = 40;
+        let velocity = 20;
         let interval;
         let introPlayed = false;
         var hintIndex = 0;
