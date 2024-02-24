@@ -85,34 +85,11 @@
     white-space: nowrap;
 }
 
-.regular-text
-{
-    margin-top: 1rem;
-    display: flex;
-    font-family: "DotGothic16", sans-serif;
-    font-size: clamp(0.8rem, 3vw, 10rem);  
-    transition: font-family 0.5s ease-in-out;
-    color: #FFFEE9;
-}
-
 #text {
     color: #FFFEE9; 
     user-select: none;
     z-index: 5;
     transition: position 0.5s ease-in-out;
-}
-
-#logo-container {
-    display: none;
-    flex-direction: column;
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
-}
-
-#logo {
-    width: 80%;
-    height: auto;
 }
 
 #no-text {
@@ -126,55 +103,6 @@
 
 #mobile {
     display: none;
-}
-
-@keyframes blink {
-    0% {opacity: 0;}
-    40% {opacity: 0;}
-    60% {opacity: 1;}
-    100% {opacity: 1;}
-}
-
-@keyframes glitch-grey {
-    2%,
-    64% {
-        transform: translate(-42%, -56%) skew(0deg);
-    }
-    4%,
-    60% {
-        transform: translate(-52%, -50%) skew(0deg);
-    }
-    62% {
-        transform: translate(-50%, -50%) skew(5deg);
-    }
-}
-
-@keyframes glitch-red {
-    2%,
-    64% {
-        transform: translate(-54%, -44%) skew(0deg);
-    }
-    4%,
-    60% {
-        transform: translate(-52%, -50%) skew(0deg);
-    }
-    62% {
-        transform: translate(-50%, -50%) skew(5deg);
-    }
-}
-
-@keyframes glitch {
-    2%,
-    64% {
-        transform: translate(-48%, -50%) skew(0deg);
-    }
-    4%,
-    60% {
-        transform: translate(-52%, -50%) skew(0deg);
-    }
-    62% {
-        transform: translate(-50%, -50%) skew(5deg);
-    }
 }
 
 @media (max-width: 800px) {
