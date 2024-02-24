@@ -170,15 +170,15 @@
             }
             switch(event.type) {
                 case 'input':
-                if (re.test(event.target.value) && textSpan.textContent.length + event.target.value.length < 16) {
-                    textSpan.textContent += event.target.value;
+                    if (re.test(event.target.value) && textSpan.textContent.length + event.target.value.length < 16) {
+                        textSpan.textContent += event.target.value;
+                    }
                     event.target.value = "";
-                }
-                break;
+                    break;
                 case 'keydown':
-                if (event.key === "Backspace")  {
-                    textSpan.textContent = textSpan.textContent.slice(0, -1);
-                }
+                    if (event.key === "Backspace")  {
+                        textSpan.textContent = textSpan.textContent.slice(0, -1);
+                    }
                 break;
             }
 
