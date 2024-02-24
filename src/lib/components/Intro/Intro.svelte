@@ -200,7 +200,7 @@
             const textSpan = document.getElementById('text');
             const noTextSpan = document.getElementById('no-text');
             const hiddenInput = document.getElementById('hidden-input');
-            //hiddenInput.focus();
+            hiddenInput.focus();
             const introHandler = (event) => intro(event, inputCursor, textSpan, noTextSpan, hiddenInput); 
             document.addEventListener('keydown', introHandler);
             hiddenInput.addEventListener('input', introHandler);
