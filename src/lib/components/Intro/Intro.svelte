@@ -1,6 +1,12 @@
 <script>
     import { onMount } from 'svelte';
-    let animationDone = false;
+    import { animationDone } from '../../../routes/stores.js';
+
+    let animationFinished;
+
+    animationDone.subscribe((value) => {
+        animationFinished = value;
+    });
 
     onMount(() => {
         let velocity = 40;
@@ -68,19 +74,17 @@
                 redSpan.style.fontFamily = fonts[fontIndex % fonts.length];
                 greySpan.style.fontFamily = fonts[fontIndex % fonts.length];
                 if (++fontIndex > fonts.length * 2) {
-                const logoSpan = document.getElementById("logo-container");
-                const progressSpan = document.getElementById("progress-bar");
-                const introWrapperSpan = document.getElementById("intro-wrapper");
-                logoSpan.style.display = 'flex';
-                progressSpan.remove();
-                introWrapperSpan.innerHTML = '';
-                introWrapperSpan.remove();
-                textSpan.style.animation = "initial";
-                textSpan.style.fontFamily = "'DotGothic16', sans-serif";
-                redSpan.remove();
-                greySpan.remove();
-                logoSpan.innerHTML = "<img id='logo' src='https://media.discordapp.net/attachments/1156704793658671166/1209668504043790377/free_will_logo_glitch_red.png?ex=65e7c295&is=65d54d95&hm=f807277c3db0cc11a6e0c58af27116fbf1593d4f89a3384626b3fa7d52e46449&=&format=webp&quality=lossless&width=1394&height=271'> <span class='regular-text' id='subheader'>Available May 2024";
-                clearInterval(interval);
+                    const progressSpan = document.getElementById("progress-bar");
+                    const introWrapperSpan = document.getElementById("intro-wrapper");
+                    progressSpan.remove();
+                    introWrapperSpan.innerHTML = '';
+                    introWrapperSpan.remove();
+                    textSpan.style.animation = "initial";
+                    textSpan.style.fontFamily = "'DotGothic16', sans-serif";
+                    redSpan.remove();
+                    greySpan.remove();
+                    animationDone.set(true);
+                    clearInterval(interval);
                 }
             }, 100);
         }
@@ -210,7 +214,7 @@
     @import "../../../styles/components/Intro.css";
 </style>
 
-{#if !animationDone}
+{#if !animationFinished}
     <div id="intro-wrapper" class="wrapper">
         <form id = "text-container" on:submit|preventDefault>
         <span id="arrow">></span>
@@ -223,6 +227,5 @@
         </div>
         </form>
   </div>
-  <span id="logo-container"></span>
   <span id="progress-bar"></span>
 {/if}

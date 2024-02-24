@@ -1,0 +1,22 @@
+#logo-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+#logo {
+    width: 50%;
+    height: auto;
+}
+
+.regular-text
+{
+    margin-top: 1rem;
+    display: flex;
+    font-family: "DotGothic16", sans-serif;
+    font-size: clamp(0.8rem, 3vw, 10rem);  
+    transition: font-family 0.5s ease-in-out;
+    color: #FFFEE9;
+}
