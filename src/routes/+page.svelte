@@ -1,15 +1,9 @@
+<!-- src/routes/index.svelte -->
 <script>
-	import Intro from '../lib/components/Intro.svelte';
-	let animationDone = false;
+    // Your script here
 </script>
 
-<svelte:head>
-	<title>Home</title>
-	<meta name="description" content="Svelte demo app" />
-</svelte:head>
-
-<Intro/>
-
-<style>
-
-</style>
+<main>
+<h1>Welcome to My SvelteKit App</h1>
+<!-- Additional content -->
+</main>
