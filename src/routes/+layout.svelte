@@ -15,7 +15,6 @@
 {#if !animation}
 	<Intro/>
 {:else}
-	
 	<About/>
   	<slot />
 {/if}
