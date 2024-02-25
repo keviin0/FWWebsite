@@ -3,8 +3,11 @@
 
     onMount(() => {
         setTimeout(() => {
-            document.getElementById("subheader").style.opacity = 1;
-        }, 10);
+            let elements = document.getElementsByClassName("subheader-container");
+            Array.from(elements).forEach(element => {
+                element.style.opacity = 1;
+            });
+        }, 2000);
     });
     let logo = '/assets/free_will_logo_glitch_red.png'
     let defaultSteamImageSrc = '/assets/steam_logo_black.svg';

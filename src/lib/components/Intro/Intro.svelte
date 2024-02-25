@@ -33,7 +33,7 @@
 
         const hintInterval = setInterval(updateHint, 5030);
 
-        function transition() {
+        async function transition() {
             if (window.introHandlerRef) {
                 if (!skip) {
                 document.removeEventListener('keydown', window.introHandlerRef);
@@ -56,7 +56,6 @@
             
             const greySpan = textSpan.cloneNode(true);
             const redSpan = textSpan.cloneNode(true);
-            textSpan.style.animation = "glitch 1s linear infinite";
             
             redSpan.style.color = "#FF0000";
             redSpan.style.animation = "glitch-red 1s linear infinite";
@@ -65,6 +64,12 @@
             greySpan.style.zIndex = "3";
             greySpan.style.animation = "glitch-grey 1s linear infinite";
             
+            await new Promise(r => setTimeout(r, 2000));
+
+            textSpan.style.animation = "glitch 1s linear infinite";
+
+            await new Promise(r => setTimeout(r, 2000));
+
             textSpan.parentNode.appendChild(greySpan);
             textSpan.parentNode.appendChild(redSpan);
             
@@ -74,7 +79,7 @@
                 redSpan.style.fontFamily = fonts[fontIndex % fonts.length];
                 greySpan.style.fontFamily = fonts[fontIndex % fonts.length];
                 ++fontIndex;
-                if (++fontIndex > fonts.length * 2) {
+                if (++fontIndex > fonts.length * 6) {
                     const progressSpan = document.getElementById("progress-bar");
                     const introWrapperSpan = document.getElementById("intro-wrapper");
                     progressSpan.remove();
