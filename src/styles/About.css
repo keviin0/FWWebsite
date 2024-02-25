@@ -9,6 +9,7 @@
 #logo {
     width: 50%;
     height: auto;
+    pointer-events: none;
 }
 
 .regular-text
