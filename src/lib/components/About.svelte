@@ -1,5 +1,4 @@
 <script>
-	import logo from '$lib/assets/free_will_logo_glitch_red.png';
     import { onMount } from 'svelte';
 
     onMount(() => {
@@ -7,12 +6,43 @@
             document.getElementById("subheader").style.opacity = 1;
         }, 10);
     });
+    let logo = '/assets/free_will_logo_glitch_red.png'
+    let defaultSteamImageSrc = '/assets/steam_logo_black.svg';
+    let hoverSteamImageSrc = '/assets/steam_logo_white.svg';
+    let defaultDiscordImageSrc = '/assets/discord_logo_black.svg';
+    let hoverDiscordImageSrc = '/assets/discord_logo_white.svg';
+
+    let currentSteamImageSrc = defaultSteamImageSrc;
+    let currentDiscordImageSrc = defaultDiscordImageSrc;
+
+    function steam_hover() {
+        currentSteamImageSrc = hoverSteamImageSrc;
+    }
+
+    function steam_unhover() {
+        currentSteamImageSrc = defaultSteamImageSrc;
+    }
+
+    function discord_hover() {
+        currentDiscordImageSrc = hoverDiscordImageSrc;
+    }
+
+    function discord_unhover() {
+        currentDiscordImageSrc = defaultDiscordImageSrc;
+    }
 </script>
 
-<span id="logo-container">
+<div id="about-container">
     <img id='logo' alt='Free Will Logo' src={logo}> 
-    <span class='regular-text' id='subheader'>Available May 2024</span>
-</span>
+    <div class='subheader-container'>
+        <span class='subheader-text' id='subheader-date'>May 2024</span>
+        <div id='s-logo-container'>
+            <a href="https://store.steampowered.com/app/2571880/Free_Will/"><img class="small-logo" id="steam-logo" alt="steam logo" src = {currentSteamImageSrc} on:mouseover={steam_hover} on:mouseout={steam_unhover}/>
+            <a href="https://discord.gg/umAuPM9KCJ"><img class="small-logo" id="discord-logo" alt="steam logo" src = {currentDiscordImageSrc} on:mouseover={discord_hover} on:mouseout={discord_unhover}/>
+        </div>
+    </div>
+</div>
+
 
 <style>
     @import "../../styles/About.css";
