@@ -20,6 +20,12 @@ body {
 	margin: 0;
 	padding: 0;
 	background-color: black;
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+}
+
+body::-webkit-scrollbar {
+	display: none;
 }
 
 h1,
@@ -35,10 +41,6 @@ p {
 a {
 	color: var(--color-theme-1);
 	text-decoration: none;
-}
-
-a:hover {
-	text-decoration: underline;
 }
 
 h1 {

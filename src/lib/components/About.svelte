@@ -7,7 +7,7 @@
             Array.from(elements).forEach(element => {
                 element.style.opacity = 1;
             });
-        }, 2000);
+        }, 500);
     });
     let logo = '/assets/free_will_logo_glitch_red.png'
     let defaultSteamImageSrc = '/assets/steam_logo_black.svg';
@@ -40,8 +40,8 @@
     <div class='subheader-container'>
         <span class='subheader-text' id='subheader-date'>May 2024</span>
         <div id='s-logo-container'>
-            <a href="https://store.steampowered.com/app/2571880/Free_Will/"><img class="small-logo" id="steam-logo" alt="steam logo" src = {currentSteamImageSrc} on:mouseover={steam_hover} on:mouseout={steam_unhover}/>
-            <a href="https://discord.gg/umAuPM9KCJ"><img class="small-logo" id="discord-logo" alt="steam logo" src = {currentDiscordImageSrc} on:mouseover={discord_hover} on:mouseout={discord_unhover}/>
+            <a href="https://store.steampowered.com/app/2571880/Free_Will/" target="_blank"><img class="small-logo" id="steam-logo" alt="steam logo" src = {currentSteamImageSrc} on:mouseover={steam_hover} on:mouseout={steam_unhover}/>
+            <a href="https://discord.gg/umAuPM9KCJ" target="_blank"><img class="small-logo" id="discord-logo" alt="steam logo" src = {currentDiscordImageSrc} on:mouseover={discord_hover} on:mouseout={discord_unhover}/>
         </div>
     </div>
 </div>
