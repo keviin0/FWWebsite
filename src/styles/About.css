@@ -11,7 +11,7 @@ a {
 }
 
 #logo {
-    width: 50%;
+    width: 70%;
     height: auto;
     pointer-events: none;
 }
@@ -19,6 +19,7 @@ a {
 .subheader-text
 {
     display: flex;
+    margin-top: 2vh;
     font-family: "DotGothic16", sans-serif;
     font-size: clamp(1.2rem, 3vw, 10rem);  
     transition: font-family 0.5s ease-in-out;
@@ -37,9 +38,11 @@ a {
     flex-direction: column;
     opacity: 0;
     transition: opacity 4s;
+    line-height: 0;
 }
 
 #s-logo-container {
+    position: relative;
     display: block;
     margin: auto;
 }
@@ -48,4 +51,5 @@ a {
     width: auto;
     height: clamp(1.5rem, 5vw, 10rem);
     transform: translate(0, 12px);
+    margin-top: 1.5vw;
 }
