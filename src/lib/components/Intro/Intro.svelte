@@ -64,11 +64,11 @@
             greySpan.style.zIndex = "3";
             greySpan.style.animation = "glitch-grey 1s linear infinite";
             
-            await new Promise(r => setTimeout(r, 1700));
+            await new Promise(r => setTimeout(r, 1500));
 
             textSpan.style.animation = "glitch 1s linear infinite";
 
-            await new Promise(r => setTimeout(r, 2000));
+            await new Promise(r => setTimeout(r, 1600));
 
             textSpan.parentNode.appendChild(greySpan);
             textSpan.parentNode.appendChild(redSpan);
