@@ -64,7 +64,7 @@
             greySpan.style.zIndex = "3";
             greySpan.style.animation = "glitch-grey 1s linear infinite";
             
-            await new Promise(r => setTimeout(r, 2000));
+            await new Promise(r => setTimeout(r, 1700));
 
             textSpan.style.animation = "glitch 1s linear infinite";
 
@@ -255,11 +255,11 @@
     @keyframes -global-glitch {
         2%,
         64% {
-            transform: translate(-48%, -50%) skew(0deg);
+            transform: translate(-46%, -50%) skew(0deg);
         }
         4%,
         60% {
-            transform: translate(-52%, -50%) skew(0deg);
+            transform: translate(-54%, -50%) skew(0deg);
         }
         62% {
             transform: translate(-50%, -50%) skew(5deg);
