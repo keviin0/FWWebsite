@@ -9,7 +9,7 @@
     });
 
     onMount(() => {
-        let velocity = 40;
+        let velocity = 20;
         let interval;
         let introPlayed = false;
         var hintIndex = 0;
@@ -170,15 +170,15 @@
             }
             switch(event.type) {
                 case 'input':
-                if (re.test(event.target.value) && textSpan.textContent.length + event.target.value.length < 16) {
-                    textSpan.textContent += event.target.value;
+                    if (re.test(event.target.value) && textSpan.textContent.length + event.target.value.length < 16) {
+                        textSpan.textContent += event.target.value;
+                    }
                     event.target.value = "";
-                }
-                break;
+                    break;
                 case 'keydown':
-                if (event.key === "Backspace")  {
-                    textSpan.textContent = textSpan.textContent.slice(0, -1);
-                }
+                    if (event.key === "Backspace")  {
+                        textSpan.textContent = textSpan.textContent.slice(0, -1);
+                    }
                 break;
             }
 
@@ -200,7 +200,7 @@
             const textSpan = document.getElementById('text');
             const noTextSpan = document.getElementById('no-text');
             const hiddenInput = document.getElementById('hidden-input');
-            //hiddenInput.focus();
+            hiddenInput.focus();
             const introHandler = (event) => intro(event, inputCursor, textSpan, noTextSpan, hiddenInput); 
             document.addEventListener('keydown', introHandler);
             hiddenInput.addEventListener('input', introHandler);
@@ -267,7 +267,7 @@
         <form id = "text-container" on:submit|preventDefault>
         <span id="arrow">></span>
         <div id="input-container">
-            <input type="text" id="hidden-input" class="real-input" maxlength="16">
+            <input type="text" id="hidden-input" class="real-input" maxlength="16" autocomplete="off">
             <span class="input-cursor"></span>
             <span class="input-text" id="no-text">Enter Your Name</span>
             <span class="input-text" id="text"></span>
