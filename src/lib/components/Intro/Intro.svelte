@@ -267,7 +267,7 @@
         <form id = "text-container" on:submit|preventDefault>
         <span id="arrow">></span>
         <div id="input-container">
-            <input type="text" id="hidden-input" class="real-input" maxlength="16">
+            <input type="text" id="hidden-input" class="real-input" maxlength="16" autocomplete="off">
             <span class="input-cursor"></span>
             <span class="input-text" id="no-text">Enter Your Name</span>
             <span class="input-text" id="text"></span>
