@@ -13,7 +13,7 @@
     let defaultSteamImageSrc = '/assets/steam_logo_black.svg';
     let hoverSteamImageSrc = '/assets/steam_logo_white.svg';
     let defaultDiscordImageSrc = '/assets/discord_logo_black.svg';
-    let hoverDiscordImageSrc = '/assets/discord_logo_white.svg';
+    let hoverDiscordImageSrc = '/assets/discord_logo_red.svg';
 
     let currentSteamImageSrc = defaultSteamImageSrc;
     let currentDiscordImageSrc = defaultDiscordImageSrc;
