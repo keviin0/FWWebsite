@@ -36,8 +36,6 @@ a {
     margin-top: 1.25vw;
     align-items: center;
     flex-direction: column;
-    opacity: 0;
-    transition: opacity 4s;
     line-height: 0;
 }
 
@@ -52,4 +50,19 @@ a {
     height: clamp(1.5rem, 5vw, 10rem);
     transform: translate(0, 12px);
     margin-top: 1.5vw;
+}
+
+.fade-in {
+    opacity: 0;
+    transition: opacity 4s;
+}
+
+#scroll-down {
+    width: auto;
+    height: clamp(1.5rem, 3vw, 10rem);
+    position: fixed;
+    left: 50%;
+    bottom: 10px;
+    transform: translate(-50%, -50%);
+    margin: 0 auto;
 }

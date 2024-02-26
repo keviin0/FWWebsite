@@ -3,7 +3,7 @@
 
     onMount(() => {
         setTimeout(() => {
-            let elements = document.getElementsByClassName("subheader-container");
+            let elements = document.getElementsByClassName("fade-in");
             Array.from(elements).forEach(element => {
                 element.style.opacity = 1;
             });
@@ -14,6 +14,7 @@
     let hoverSteamImageSrc = '/assets/steam_logo_white.svg';
     let defaultDiscordImageSrc = '/assets/discord_logo_black.svg';
     let hoverDiscordImageSrc = '/assets/discord_logo_red.svg';
+    let scrollDown = '/assets/scroll.svg';
 
     let currentSteamImageSrc = defaultSteamImageSrc;
     let currentDiscordImageSrc = defaultDiscordImageSrc;
@@ -37,13 +38,15 @@
 
 <div id="about-container">
     <img id='logo' alt='Free Will Logo' src={logo}> 
-    <div class='subheader-container'>
+    <div class='subheader-container fade-in'>
         <span class='subheader-text' id='subheader-date'>May 2024</span>
         <div id='s-logo-container'>
-            <a href="https://store.steampowered.com/app/2571880/Free_Will/" target="_blank"><img class="small-logo" id="steam-logo" alt="steam logo" src = {currentSteamImageSrc} on:mouseover={steam_hover} on:mouseout={steam_unhover}/></a>
-            <a href="https://discord.gg/umAuPM9KCJ" target="_blank"><img class="small-logo" id="discord-logo" alt="steam logo" src = {currentDiscordImageSrc} on:mouseover={discord_hover} on:mouseout={discord_unhover}/>
+            <a title = "Free Will Steam Page" href="https://store.steampowered.com/app/2571880/Free_Will/" target="_blank"><img class="small-logo" id="steam-logo" alt="steam logo" src = {currentSteamImageSrc} on:mouseover={steam_hover} on:mouseout={steam_unhover}/></a>
+            <a title = "Free Will Community Discord" href="https://discord.gg/umAuPM9KCJ" target="_blank"><img class="small-logo" id="discord-logo" alt="discord logo" src = {currentDiscordImageSrc} on:mouseover={discord_hover} on:mouseout={discord_unhover}/>
         </div>
     </div>
+
+    <img class='fade-in' id='scroll-down' alt="scroll down"src={scrollDown}/>
 </div>
 
 
