@@ -2,13 +2,40 @@
     import { onMount } from 'svelte';
 
     onMount(() => {
+        const aboutTop = document.getElementById('about-container').getBoundingClientRect().top;
+        const scrollTop = document.getElementById('scroll-down').getBoundingClientRect().top;
+
         setTimeout(() => {
             let elements = document.getElementsByClassName("fade-in");
             Array.from(elements).forEach(element => {
                 element.style.opacity = 1;
             });
         }, 500);
+
+        addEventListener("scroll", (event) => { updateScrollOpacity() });
+
+        function updateScrollOpacity() {
+            var element = document.getElementById('scroll-down');
+            if (!element) return;
+
+            var currentScrollTop = element.getBoundingClientRect().top - window.scrollY;
+            var scrolledDistance = scrollTop - currentScrollTop;
+
+            // Ensure we do not divide by zero or get negative values
+            var fadeRange = scrollTop - aboutTop;
+            if (fadeRange <= 0) return;  // Prevent division by zero or negative ranges
+
+            var opacity = 1 - (scrolledDistance / fadeRange);
+            opacity = Math.min(Math.max(opacity, 0), 1); // Clamp opacity between 0 and 1
+
+            console.log(opacity);
+
+            element.style.opacity = opacity;
+        }
     });
+
+    
+
     let logo = '/assets/free_will_logo_glitch_red.png'
     let defaultSteamImageSrc = '/assets/steam_logo_black.svg';
     let hoverSteamImageSrc = '/assets/steam_logo_white.svg';
@@ -33,7 +60,7 @@
 
     function discord_unhover() {
         currentDiscordImageSrc = defaultDiscordImageSrc;
-    }
+    }    
 </script>
 
 <div id="about-container">

@@ -60,9 +60,11 @@ a {
 #scroll-down {
     width: auto;
     height: clamp(1.5rem, 3vw, 10rem);
-    position: fixed;
+    position: absolute;
     left: 50%;
     bottom: 10px;
     transform: translate(-50%, -50%);
     margin: 0 auto;
+    opacity: 0;
+    transition: opacity 4s ease-in-out;
 }
