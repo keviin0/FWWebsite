@@ -46,7 +46,7 @@
     }
 </script>
 
-<div class='subheader-container'>
+<div class='footer-container'>
     <div id='s-logo-container'>
         <a href="https://www.instagram.com/freewill_game/" target="_blank"><img class="small-logo" id="instagram-logo" alt="instagram logo" src = {currentInstagramImageSrc} on:mouseover={instagram_hover} on:mouseout={instagram_unhover}/></a>
         <a href="https://www.tiktok.com/@freewillgame" target="_blank"><img class="small-logo" id="tiktok-logo" alt="tiktok logo" src = {currentTiktokImageSrc} on:mouseover={tiktok_hover} on:mouseout={tiktok_unhover}/></a>
@@ -57,4 +57,5 @@
 
 <style>
     @import "../../styles/About.css";
+    @import "../../styles/Footer.css";
 </style>
