@@ -39,6 +39,26 @@
 
         const hintInterval = setInterval(updateHint, 5030);
 
+        async function preloadAssets() {
+            const assetsToPreload = [
+                '/assets/free_will_logo_glitch_red.png',
+                '/assets/steam_logo_black.svg',
+                '/assets/steam_logo_white.svg',
+                '/assets/discord_logo_black.svg',
+                '/assets/discord_logo_red.svg',
+                '/assets/scroll.svg',
+            ];
+
+            // Create link elements for each asset and append them to the head
+            assetsToPreload.forEach((href) => {
+                const link = document.createElement('link');
+                link.rel = 'preload';
+                link.href = href;
+                link.as = 'image'; // Use appropriate 'as' value for different types of assets
+                document.head.appendChild(link);
+            });
+        }
+
         async function transition() {
             if (window.introHandlerRef) {
                 if (!skip) {
@@ -48,6 +68,7 @@
                 }
             }
             clearInterval(hintInterval);
+            preloadAssets();
             const inputCursor = document.getElementsByClassName('input-cursor')[0];
             const arrow = document.getElementById("arrow");
             arrow.style.opacity = "0";

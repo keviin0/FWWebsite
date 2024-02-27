@@ -40,11 +40,10 @@
             var bottomVal = container.getBoundingClientRect().bottom;
             var topVal = container.getBoundingClientRect().top;
             var scrollPercentage = clamp((window.innerHeight - topVal)/ (bottomVal - topVal), 0, 4);
-            console.log(scrollPercentage);
 
             // Apply the transformation to each hovering-picture element
             elements.forEach(function(element) {
-                var translateYValue = 90 - scrollPercentage * 95;
+                var translateYValue = 65 - scrollPercentage * 76;
                 var rotateValue = 20 - scrollPercentage * 20; 
             
                 element.style.setProperty('--translateY', `${translateYValue}px`);
@@ -83,6 +82,8 @@
                 </div>
                 <div id="context-description-container" class="right-section-inner">
                     <div id="context-description-text"  class="regular-text">
+                        Free Will is a <strong>2D psychological puzzle RPG suffering from corruption</strong>. 
+                        Playing this game means you accept the responsibility of cleansing Corruption from its system.<br> 
                         Control <strong>Will</strong>, a young boy who has been bedridden for most of his life, as he fights against reality-breaking monsters. <br>
                         Watch as <strong>Will</strong> tries to understand the depth of his own autonomy. <br>
                         And play out your role in cleansing the game. <br>
