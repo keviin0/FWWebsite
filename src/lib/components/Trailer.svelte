@@ -1,6 +1,5 @@
     <script>
         import { onMount } from 'svelte';
-        import * as j$ from 'jquery';
 
         let tv = '/assets/TV.svg';
         let willSprite = '/assets/will_sprite.svg';

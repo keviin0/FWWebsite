@@ -49,7 +49,7 @@
     position: absolute;
     width: 80%;
     height: 100%;
-    animation: rotate 10s linear infinite;
+    animation: rotate 15s steps(1, end) infinite;
 }
 
 #os-description-text {
@@ -131,13 +131,68 @@
 }
 
 @keyframes rotate {
-    0% {
+    0%, 5% {
         transform: rotate(0deg);
     }
-    100% {
-        transform: rotate(360deg);
+    5%, 10% {
+        transform: rotate(18deg);
+    }
+    10%, 15% {
+        transform: rotate(36deg);
+    }
+    15%, 20% {
+        transform: rotate(54deg);
+    }
+    20%, 25% { /* Corrected interval */
+        transform: rotate(72deg);
+    }
+    25%, 30% {
+        transform: rotate(90deg);
+    }
+    30%, 35% {
+        transform: rotate(108deg);
+    }
+    35%, 40% {
+        transform: rotate(126deg);
+    }
+    40%, 45% {
+        transform: rotate(144deg);
+    }
+    45%, 50% {
+        transform: rotate(162deg);
+    }
+    50%, 55% {
+        transform: rotate(180deg);
+    }
+    55%, 60% {
+        transform: rotate(198deg);
+    }
+    60%, 65% {
+        transform: rotate(216deg);
+    }
+    65%, 70% {
+        transform: rotate(234deg);
+    }
+    70%, 75% {
+        transform: rotate(252deg);
+    }
+    75%, 80% {
+        transform: rotate(270deg);
+    }
+    80%, 85% {
+        transform: rotate(288deg);
+    }
+    85%, 90% {
+        transform: rotate(306deg);
+    }
+    90%, 95% {
+        transform: rotate(324deg);
+    }
+    95%, 100% {
+        transform: rotate(342deg);
     }
 }
+
 
 @media only screen and (min-width: 80em) {
     .wrapper {
