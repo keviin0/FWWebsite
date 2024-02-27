@@ -1,36 +1,31 @@
 <script>
     import { onMount } from 'svelte';
 
+    const clamp = (num, min, max) => Math.min(Math.max(num, min), max)
+
     onMount(() => {
-        const aboutTop = document.getElementById('about-container').getBoundingClientRect().top;
-        const scrollTop = document.getElementById('scroll-down').getBoundingClientRect().top;
+        const adjustedHeight = window.innerHeight / 1.5;
+        const denominator = document.getElementById('scroll-down').getBoundingClientRect().top - adjustedHeight;
 
         setTimeout(() => {
             let elements = document.getElementsByClassName("fade-in");
             Array.from(elements).forEach(element => {
                 element.style.opacity = 1;
             });
-        }, 500);
-
+        }, 200);
+        
         addEventListener("scroll", (event) => { updateScrollOpacity() });
 
         function updateScrollOpacity() {
             var element = document.getElementById('scroll-down');
             if (!element) return;
 
-            var currentScrollTop = element.getBoundingClientRect().top - window.scrollY;
-            var scrolledDistance = scrollTop - currentScrollTop;
-
-            // Ensure we do not divide by zero or get negative values
-            var fadeRange = scrollTop - aboutTop;
-            if (fadeRange <= 0) return;  // Prevent division by zero or negative ranges
-
-            var opacity = 1 - (scrolledDistance / fadeRange);
-            opacity = Math.min(Math.max(opacity, 0), 1); // Clamp opacity between 0 and 1
-
-            console.log(opacity);
-
-            element.style.opacity = opacity;
+            document.getElementById('scroll-down').style.transition = "opacity 0.1s ease-in-out";
+            console.log(adjustedHeight);
+            console.log(element.getBoundingClientRect().top);
+            
+            var newOpacity = clamp((element.getBoundingClientRect().top - adjustedHeight)/denominator, 0, 1);
+            element.style.opacity = newOpacity;
         }
     });
 
