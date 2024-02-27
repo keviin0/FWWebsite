@@ -44,7 +44,7 @@
 
             // Apply the transformation to each hovering-picture element
             elements.forEach(function(element) {
-                var translateYValue = 125 - scrollPercentage * 110;
+                var translateYValue = 90 - scrollPercentage * 95;
                 var rotateValue = 20 - scrollPercentage * 20; 
             
                 element.style.setProperty('--translateY', `${translateYValue}px`);

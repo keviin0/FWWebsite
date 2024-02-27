@@ -67,7 +67,7 @@
 }
 
 .hovering-picture {
-    --translateY: -125px;
+    --translateY: -90px;
     --rotate: 20deg;
     position: absolute;
     transform: translate(0, var(--translateY)) rotate(var(--rotate));
