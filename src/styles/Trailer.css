@@ -6,7 +6,10 @@
 .section-label {
     margin-bottom: calc(3.84615vw + 57.69231px);
     font-family: "DotGothic16", sans-serif;
-    color: #fffee9
+    color: #fffee9;
+    width: 100%;
+    margin: auto;
+    text-align: center;
 }
 
 ::-webkit-scrollbar {display:none;} 
