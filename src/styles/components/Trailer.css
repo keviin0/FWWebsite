@@ -52,18 +52,14 @@
     animation: rotate 15s steps(1, end) infinite;
 }
 
-#os-description-text {
-    width: 50%;
-    text-align: center;
-    margin: auto;
-}
-
 .regular-text {
     font-family: "DotGothic16", sans-serif;
     font-size: 1.0rem;
     line-height: 1.35;
     color: #FFFEE9; 
     font-stretch: 120%;  
+    height:50%;
+    margin: auto;
 }
 
 #filler {
@@ -71,7 +67,7 @@
 }
 
 .hovering-picture {
-    --translateY: -150px;
+    --translateY: -125px;
     --rotate: 20deg;
     position: absolute;
     transform: translate(0, var(--translateY)) rotate(var(--rotate));
@@ -85,10 +81,6 @@
     height: 100%;
 }
 
-#os-description-text {
-    font-size: 1.6rem;
-}
-
 @media only screen and (min-width: 48em) {
     .section-item, .reversed-section-item {
         display: flex;
@@ -97,6 +89,8 @@
     #context-description-container {
         padding-right: 4.1666666667%;
         padding-left: 0;
+        height:50%;
+        margin: auto;
     }
 
     #context-inner-container {

@@ -24,7 +24,7 @@
             circularText = document.querySelector('.os-text p');
             circularText.innerHTML = circularText.innerText.split('').map(
                 (char, i) =>
-                `<span style="transform:rotate(${i * 21.18}deg) translate(0, -100%); color: #FFFEE9; position: absolute; font-size: 2.5em; transform-origin: 0px 86px; left: 50%; font-family: DotGothic16, sans-serif;">${char}</span>`
+                `<span style="transform:rotate(${i * 20}deg) translate(0, -100%); color: #FFFEE9; position: absolute; font-size: 2.5em; transform-origin: 0px 86px; left: 50%; font-family: DotGothic16, sans-serif;">${char}</span>`
             ).join('');
 
             addEventListener("scroll", (event) => { updateScrollRotation() });
@@ -44,7 +44,7 @@
 
             // Apply the transformation to each hovering-picture element
             elements.forEach(function(element) {
-                var translateYValue = 100 - scrollPercentage * 100;
+                var translateYValue = 125 - scrollPercentage * 110;
                 var rotateValue = 20 - scrollPercentage * 20; 
             
                 element.style.setProperty('--translateY', `${translateYValue}px`);
@@ -83,7 +83,9 @@
                 </div>
                 <div id="context-description-container" class="right-section-inner">
                     <div id="context-description-text"  class="regular-text">
-                        <strong>Free Will</strong> is a <strong>2D psychological puzzle RPG</strong> where players tackle corruption within the game's system. As Will, a chronically ill boy, players face reality-distorting enemies and delve into the game's code to expose hidden truths and cleanse corruption, confronting challenges that question the nature of choice and knowledge within a mysterious, deteriorating digital world.
+                        Control <strong>Will</strong>, a young boy who has been bedridden for most of his life, as he fights against reality-breaking monsters. <br>
+                        Watch as <strong>Will</strong> tries to understand the depth of his own autonomy. <br>
+                        And play out your role in cleansing the game. <br>
                     </div>
                 </div>
             </div>
@@ -91,7 +93,7 @@
                 <div id="os-inner-container" class="left-section-inner title">
                     <div class="circle">
                         <div class="os-text">
-                            <p>OPERATING SYSTEM </p>
+                            <p>FEATURES FEATURES </p>
                         </div>
                         <img alt="windows logo" class="hovering-picture" src={windows}/>
                     </div>
@@ -99,7 +101,10 @@
                 <div id="os-video-container" class="right-section-inner">
                     <!-- svelte-ignore a11y-media-has-caption -->
                     <div id="os-description-text"  class="regular-text">
-                        <strong>WINDOWS ONLY</strong>
+                        > Manipulate the game's file structure through metapuzzles to influence Will's world. <br>
+                        > Get to know Will--he knows you are there… <br>
+                        > Cleanse the corruption. For there is no other way forward. <br>
+                        > Unearth ̸i̶n̵f̷o̴r̶m̸a̷t̵i̴o̵n̸ ̸t̶h̶a̸t̷ ̶̃̕the inhabitants ̵͂̽ô̶͝f̶́ this ̄̈́h̵̐ou̅s̸e might b͑͛ȅ̴͊ ̶̂̾b̸̀̑ĕ̷͕t̷̽ter off not k̴̈́nowing. <br>
                     </div>
                 </div>
             </div>
@@ -110,6 +115,6 @@
     </div>
 
     <style>
-        @import "../../styles/Trailer.css";
+        @import "../../styles/components/Trailer.css";
 
     </style>

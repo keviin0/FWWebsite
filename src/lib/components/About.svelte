@@ -71,5 +71,5 @@
 
 
 <style>
-    @import "../../styles/About.css";
+    @import "../../styles/components/About.css";
 </style>
