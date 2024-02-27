@@ -24,9 +24,7 @@ body {
 	scrollbar-width: none;
 }
 
-body::-webkit-scrollbar {
-	display: none;
-}
+::-webkit-scrollbar {display:none;} 
 
 h1,
 h2,
