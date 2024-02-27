@@ -5,6 +5,7 @@
 	import Intro from '../lib/components/Intro/Intro.svelte';
 	import { animationDone } from './stores';
     import About from '$lib/components/About.svelte';
+	import Trailer from '$lib/components/Trailer.svelte';
 
 	let animation;
 
@@ -19,5 +20,6 @@
 	<Intro/>
 {:else}
 	<About/>
+	<Trailer/>
   	<slot />
 {/if}
