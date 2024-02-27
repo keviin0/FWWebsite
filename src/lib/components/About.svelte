@@ -1,7 +1,7 @@
 <script>
     import { onMount } from 'svelte';
 
-    const clamp = (num, min, max) => Math.min(Math.max(num, min), max)
+    const clamp = (num, min, max) => Math.min(Math.max(num, min), max);
 
     onMount(() => {
         const adjustedHeight = window.innerHeight / 1.5;
