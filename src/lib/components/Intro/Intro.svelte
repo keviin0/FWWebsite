@@ -27,11 +27,11 @@
         "'DotGothic16', sans-serif"
         ];
 		
-		var mainLoop = mainLoop = new Audio('/assets/01_main_loop.wav');
-		var typing = new Audio('/assets/02_typing.wav');
-		var loadBar = new Audio('/assets/03_black_screen_coming_down.wav');
-		var nameGlitch = new Audio('/assets/04_name_glitch.wav');
-		var titleStinger = new Audio('/assets/05_title_stinger.wav');
+	var mainLoop = mainLoop = new Audio('/assets/01_main_loop.wav');
+	var typing = new Audio('/assets/02_typing.wav');
+	var loadBar = new Audio('/assets/03_black_screen_coming_down.wav');
+	var nameGlitch = new Audio('/assets/04_name_glitch.wav');
+	var titleStinger = new Audio('/assets/05_title_stinger.wav');
 
         function updateHint() {
             document.getElementById("no-text").textContent = hints[++hintIndex % hints.length];
@@ -69,7 +69,7 @@
             greySpan.style.color = "#ACA9A5";
             greySpan.style.zIndex = "3";
             greySpan.style.animation = "glitch-grey 1s linear infinite";
-			loadBar.pause();
+	    loadBar.pause();
             
             await new Promise(r => setTimeout(r, 1500));
 
@@ -79,7 +79,7 @@
 
             textSpan.parentNode.appendChild(greySpan);
             textSpan.parentNode.appendChild(redSpan);
-			nameGlitch.play();
+	    nameGlitch.play();
             
             var fontIndex = 0; 
             interval = setInterval(() => {
@@ -98,9 +98,9 @@
                     redSpan.remove();
                     greySpan.remove();
                     animationDone.set(true);
-					nameGlitch.pause();
-					mainLoop.pause();
-					titleStinger.play();
+		    nameGlitch.pause();
+		    mainLoop.pause();
+		    titleStinger.play();
                     clearInterval(interval);
                 }
             }, 100);
@@ -159,8 +159,8 @@
                     introPlayed = true;
                 }
                 if (skip) {
-					velocity *= 1.1;
-				}
+			velocity *= 1.1;
+		}
                 progressBar.style.setProperty('--height', Math.min(height + velocity/200, 100));
             } else {
                 const progressBar = document.getElementById("progress-bar");
@@ -172,7 +172,7 @@
 
         function intro(event, inputCursor, textSpan, noTextSpan, hiddenInput) {
             if (event.key === "Enter") {
-				loadBar.play();
+		loadBar.play();
                 event.preventDefault();
                 skip = true;
                 document.removeEventListener('keydown', window.introHandlerRef);
@@ -190,14 +190,14 @@
             switch(event.type) {
                 case 'input':
                     if (re.test(event.target.value) && textSpan.textContent.length + event.target.value.length < 16) {
-						typing.play();
+			typing.play();
                         textSpan.textContent += event.target.value;
                     }
                     event.target.value = "";
                     break;
                 case 'keydown':
                     if (event.key === "Backspace")  {
-						typing.play();
+			typing.play();
                         textSpan.textContent = textSpan.textContent.slice(0, -1);
                     }
                 break;
