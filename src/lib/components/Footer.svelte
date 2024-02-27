@@ -10,12 +10,12 @@
         }, 500);
     });
 
-    let defaultInstagramImageSrc = '/assets/steam_logo_black.svg';
-    let hoverInstagramImageSrc = '/assets/steam_logo_white.svg';
-    let defaultTiktokImageSrc = '/assets/steam_logo_black.svg';
-    let hoverTiktokImageSrc = '/assets/steam_logo_white.svg';
-    let defaultTwitterImageSrc = '/assets/steam_logo_black.svg';
-    let hoverTwitterImageSrc = '/assets/steam_logo_white.svg';
+    let defaultInstagramImageSrc = '/assets/instagram_logo_white.svg';
+    let hoverInstagramImageSrc = '/assets/instagram_logo_red.svg';
+    let defaultTiktokImageSrc = '/assets/Tiktok_logo_white.svg';
+    let hoverTiktokImageSrc = '/assets/Tiktok_logo_red.svg';
+    let defaultTwitterImageSrc = '/assets/twitter-x_logo_white.svg';
+    let hoverTwitterImageSrc = '/assets/twitter-x_logo_red.svg';
 
     let currentInstagramImageSrc = defaultInstagramImageSrc;
     let currentTiktokImageSrc = defaultTiktokImageSrc;
