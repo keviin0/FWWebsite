@@ -9,13 +9,8 @@
         const clamp = (num, min, max) => Math.min(Math.max(num, min), max);
 
         onMount(() => {
-            var circularText = document.querySelector('.circular-text p');
-            circularText.innerHTML = circularText.innerText.split('').map(
-                (char, i) =>
-                `<span style="transform:rotate(${i * 22.5}deg) translate(0, -100%); color: #FFFEE9; position: absolute; font-size: 2.5em; transform-origin: 0px 86px; left: 50%; font-family: DotGothic16, sans-serif;">${char}</span>`
-            ).join('');
             
-            circularText = document.querySelector('.context-text p');
+            var circularText = document.querySelector('.context-text p');
             circularText.innerHTML = circularText.innerText.split('').map(
                 (char, i) =>
                 `<span style="transform:rotate(${i * 22.5}deg) translate(0, -100%); color: #FFFEE9; position: absolute; font-size: 2.5em; transform-origin: 0px 86px; left: 50%; font-family: DotGothic16, sans-serif;">${char}</span>`
@@ -33,7 +28,7 @@
 
         async function updateScrollRotation() {
             var elements = document.querySelectorAll('.hovering-picture');
-            var container = document.querySelector('.container');
+            var container = document.querySelector('#context-container');
 
             if (!elements || !container) return;
 
@@ -43,8 +38,8 @@
 
             // Apply the transformation to each hovering-picture element
             elements.forEach(function(element) {
-                var translateYValue = 65 - scrollPercentage * 76;
-                var rotateValue = 20 - scrollPercentage * 20; 
+                var translateYValue = 65 - scrollPercentage * 25;
+                var rotateValue = 20 - scrollPercentage * 5; 
             
                 element.style.setProperty('--translateY', `${translateYValue}px`);
                 element.style.setProperty('--rotate', `${rotateValue}deg`);
@@ -56,15 +51,7 @@
         <div class="container">
             <div class="section-label">About our game</div>
             <div id="trailer-container" class="section-item">
-                <div id="trailer-inner-container" class="left-section-inner title">
-                    <div class="circle">
-                        <div class="circular-text">
-                            <p>TRAILER TRAILER </p>
-                        </div>
-                        <img alt="tv" class="hovering-picture" src={tv}/>
-                    </div>
-                </div>
-                <div id="trailer-video-container" class="right-section-inner">
+                <div id="trailer-video-container">
                     <!-- svelte-ignore a11y-media-has-caption -->
                     <video id="trailer-video" controls>
                         <source src={trailer_video} type="video/mp4">
@@ -83,10 +70,10 @@
                 <div id="context-description-container" class="right-section-inner">
                     <div id="context-description-text"  class="regular-text">
                         Free Will is a <strong>2D psychological puzzle RPG suffering from corruption</strong>. 
-                        Playing this game means you accept the responsibility of cleansing Corruption from its system.<br> 
-                        Control <strong>Will</strong>, a young boy who has been bedridden for most of his life, as he fights against reality-breaking monsters. <br>
-                        Watch as <strong>Will</strong> tries to understand the depth of his own autonomy. <br>
-                        And play out your role in cleansing the game. <br>
+                        Playing this game means you accept the responsibility of cleansing Corruption from its system.
+                        Control <strong>Will</strong>, a young boy who has been bedridden for most of his life, as he fights against reality-breaking monsters.
+                        Watch as <strong>Will</strong> tries to understand the depth of his own autonomy.
+                        And play out <strong>your role</strong> in cleansing the game. 
                     </div>
                 </div>
             </div>
