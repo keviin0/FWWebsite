@@ -1,6 +1,6 @@
 <script>
     import { onMount } from 'svelte';
-    import { animationDone } from '../../../routes/stores.js';
+    import { animationDone } from '../../routes/stores.js';
 
     let animationFinished;
 
@@ -252,7 +252,7 @@
 </script>
 
 <style>
-    @import "../../../styles/components/Intro.css";
+    @import "../../styles/components/Intro.css";
 
     @keyframes -global-blink {
         0% {opacity: 0;}

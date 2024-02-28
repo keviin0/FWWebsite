@@ -101,9 +101,6 @@
             </div>
         </div>
     </div>
-    <div id="filler">
-
-    </div>
 
     <style>
         @import "../../styles/components/Trailer.css";
