@@ -1,7 +1,6 @@
     <script>
         import { onMount } from 'svelte';
 
-        let tv = '/assets/TV.svg';
         let willSprite = '/assets/will_sprite.svg';
         let windows = '/assets/windows_logo_white.svg';
         let trailer_video = '/assets/FWTrailer_03.mp4';
@@ -28,18 +27,19 @@
 
         async function updateScrollRotation() {
             var elements = document.querySelectorAll('.hovering-picture');
-            var container = document.querySelector('#context-container');
+            var topContainer = document.querySelector('#context-container');
+            var bottomContainer = document.querySelector('#os-inner-container');
 
-            if (!elements || !container) return;
+            if (!elements || !topContainer || !bottomContainer) return;
 
-            var bottomVal = container.getBoundingClientRect().bottom;
-            var topVal = container.getBoundingClientRect().top;
+            var bottomVal = bottomContainer.getBoundingClientRect().bottom;
+            var topVal = topContainer.getBoundingClientRect().top;
             var scrollPercentage = clamp((window.innerHeight - topVal)/ (bottomVal - topVal), 0, 4);
 
             // Apply the transformation to each hovering-picture element
             elements.forEach(function(element) {
-                var translateYValue = 65 - scrollPercentage * 25;
-                var rotateValue = 20 - scrollPercentage * 5; 
+                var translateYValue = 65 - scrollPercentage * 65;
+                var rotateValue = 20 - scrollPercentage * 20; 
             
                 element.style.setProperty('--translateY', `${translateYValue}px`);
                 element.style.setProperty('--rotate', `${rotateValue}deg`);
@@ -70,14 +70,16 @@
                 <div id="context-description-container" class="right-section-inner">
                     <div id="context-description-text"  class="regular-text">
                         Free Will is a <strong>2D psychological puzzle RPG suffering from corruption</strong>. 
-                        Playing this game means you accept the responsibility of cleansing Corruption from its system.
-                        Control <strong>Will</strong>, a young boy who has been bedridden for most of his life, as he fights against reality-breaking monsters.
-                        Watch as <strong>Will</strong> tries to understand the depth of his own autonomy.
-                        And play out <strong>your role</strong> in cleansing the game. 
+                        Playing this game means you accept the responsibility of cleansing Corruption from its system.<br>
+                        <br>
+                        STORY<br>
+                        Control Will, a young boy who has been bedridden for most of his life, as he fights against reality-breaking monsters. <br>
+                        Watch as Will tries to understand the depth of his own autonomy. <br>
+                        And play out <strong>your role</strong> in cleansing the game.
                     </div>
                 </div>
             </div>
-            <div class="section-item">
+            <div id="feature-container" class="section-item">
                 <div id="os-inner-container" class="left-section-inner title">
                     <div class="circle">
                         <div class="os-text">
@@ -89,6 +91,7 @@
                 <div id="os-video-container" class="right-section-inner">
                     <!-- svelte-ignore a11y-media-has-caption -->
                     <div id="os-description-text"  class="regular-text">
+                        FEATURES<br>
                         > Manipulate the game's file structure through metapuzzles to influence Will's world. <br>
                         > Get to know Will--he knows you are there… <br>
                         > Cleanse the corruption. For there is no other way forward. <br>
