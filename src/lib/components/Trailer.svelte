@@ -101,11 +101,11 @@
             </div>
         </div>
     </div>
-    <div id="filler">
-
-    </div>
 
     <style>
         @import "../../styles/components/Trailer.css";
 
+        #trailer-video-container {
+            box-shadow: 0 0 50px 10px #41494d;
+        }
     </style>
