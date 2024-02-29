@@ -49,7 +49,7 @@
 
     <div class="wrapper">
         <div class="container">
-            <div class="section-label">About our game</div>
+            <div class="section-label">Trailer</div>
             <div id="trailer-container" class="section-item">
                 <div id="trailer-video-container">
                     <!-- svelte-ignore a11y-media-has-caption -->
@@ -58,6 +58,8 @@
                     </video>
                 </div>
             </div>
+
+            <div class="section-label">About Our Game</div>
             <div id="context-container" class="reversed-section-item">
                 <div id="context-inner-container" class="left-section-inner title">
                     <div class="circle">

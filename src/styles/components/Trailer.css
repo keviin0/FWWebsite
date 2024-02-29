@@ -26,12 +26,15 @@
     margin: auto;
 }
 
+#context-container {
+    padding: 30px 0 30px 0;
+}
+
 .section-item, 
 .reversed-section-item {
     margin-bottom: calc(6.73077vw + 18.46154px);
     display: flex;
     flex-direction: row;
-    padding: 30px 0 30px 0;
 }
 
 .circle {
