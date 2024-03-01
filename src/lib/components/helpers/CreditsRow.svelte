@@ -96,6 +96,17 @@
                     </div>
                 </div>
             </div>
+            <div class="card">
+                <a target="_blank" href="https://allyguo.wixsite.com/site" style="background-image: url('/assets/pfps/ally.jpg'); background-position: 10% 70%; background-size: 110%">
+                <div class="person-info">
+                    <div class="person-name">
+                        Ally Guo
+                    </div>
+                    <div class="person-role">
+                        Programmer
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     {/if}
