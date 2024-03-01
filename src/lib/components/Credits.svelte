@@ -167,7 +167,6 @@
                     <span>E</span>
                     <span>E</span>
                     <span>R</span>
-                    <span>S</span>
                 </div>
             </div>
             <div class="row-container">
@@ -179,15 +178,12 @@
         <div class="category-container">
             <div class="word-container">
                 <div class="line">
-                    <span>N</span>
-                    <span>A</span>
+                    <span>W</span>
                     <span>R</span>
-                    <span>R</span>
-                    <span>A</span>
-                    <span>T</span>
                     <span>I</span>
-                    <span>V</span>
+                    <span>T</span>
                     <span>E</span>
+                    <span>R</span>
                 </div>
             </div>
             <div class="row-container">
@@ -205,7 +201,6 @@
                     <span>I</span>
                     <span>S</span>
                     <span>T</span>
-                    <span>S</span>
                 </div>
             </div>
             <div class="row-container">
