@@ -36,7 +36,6 @@
             var topVal = topContainer.getBoundingClientRect().top;
             var scrollPercentage = clamp((window.innerHeight - topVal)/ (bottomVal - topVal), 0.6, 1.7);
 
-            // Apply the transformation to each hovering-picture element
             elements.forEach(function(element) {
                 var translateYValue = 65 - scrollPercentage * 65;
                 var rotateValue = 20 - scrollPercentage * 20; 

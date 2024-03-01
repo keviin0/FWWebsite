@@ -16,15 +16,15 @@
         var skip = false;
         const re = new RegExp("^[a-z0-9]+$", "i");
         const hints = [
-        "Enter Your Name",
-        "<enter> To Cont."
+            "Enter Your Name",
+            "<enter> To Cont."
         ]
         const fonts = [
-        "'Open Sans', sans-serif",
-        "'Wingdings', sans-serif", // Note: Wingdings may not display text as expected in HTML documents
-        "'Arial', sans-serif",
-        "'Black And White Picture', system-ui",
-        "'DotGothic16', sans-serif"
+            "'Open Sans', sans-serif",
+            "'Wingdings', sans-serif",
+            "'Arial', sans-serif",
+            "'Black And White Picture', system-ui",
+            "'DotGothic16', sans-serif"
         ];
 		
         var mainLoop = mainLoop = new Audio('/assets/01_main_loop.wav');
@@ -47,7 +47,7 @@
 
         const hintInterval = setInterval(updateHint, 5030);
 
-        async function preloadAssets() {
+        function preloadAssets() {
             const assetsToPreload = [
                 '/assets/free_will_logo_glitch_red.png',
                 '/assets/steam_logo_black.svg',
@@ -55,26 +55,46 @@
                 '/assets/discord_logo_black.svg',
                 '/assets/discord_logo_red.svg',
                 '/assets/scroll.svg',
+                '/assets/will_sprite.svg',
+                '/assets/windows_logo_white.svg',
+                '/assets/FWTrailer_03.mp4',
+                '/assets/pfps/celine.png',
+                '/assets/pfps/lena.png',
+                '/assets/pfps/daniel.png',
+                '/assets/pfps/kevin_head.jpeg',
+                '/assets/pfps/julia.jpg',
+                '/assets/pfps/ally.jpg',
+                '/assets/pfps/grace.jpeg',
+                '/assets/pfps/jasmine.png',
+                '/assets/pfps/icemasterx.jpg',
+                '/assets/pfps/johh.jpg',
+                '/assets/pfps/justin.jpg',
+                '/assets/pfps/skylar.jpeg'
             ];
 
-            // Create link elements for each asset and append them to the head
             assetsToPreload.forEach((href) => {
-                const link = document.createElement('link');
-                link.rel = 'preload';
-                link.href = href;
-                link.as = 'image'; // Use appropriate 'as' value for different types of assets
-                document.head.appendChild(link);
+                let element;
+
+                if (href.endsWith('.mp4')) {
+                    element = document.createElement('video');
+                    element.preload = 'auto';
+                } else {
+                    element = document.createElement('img');
+                }
+                element.src = href;
             });
         }
 
+
         async function transition() {
             if (window.introHandlerRef) {
-                if (!skip) {
                 document.removeEventListener('keydown', window.introHandlerRef);
                 document.removeEventListener('input', window.introHandlerRef);
-                delete window.introHandlerRef;
-                }
+                console.log("Event listeners removed");
             }
+
+            // Nullify the reference to prevent future attempts to remove already removed listeners
+            window.introHandlerRef = null;
             clearInterval(hintInterval);
             preloadAssets();
             const inputCursor = document.getElementsByClassName('input-cursor')[0];
@@ -188,8 +208,8 @@
                     introPlayed = true;
                 }
                 if (skip) {
-			velocity *= 1.1;
-		}
+                    velocity *= 1.1;
+                }
                 progressBar.style.setProperty('--height', Math.min(height + velocity/200, 100));
             } else {
                 const progressBar = document.getElementById("progress-bar");
@@ -204,12 +224,9 @@
 		        loadBar.play();
                 event.preventDefault();
                 skip = true;
-                document.removeEventListener('keydown', window.introHandlerRef);
-                document.removeEventListener('input', window.introHandlerRef);
-                delete window.introHandlerRef;
                 if (textSpan.textContent.length == 0) {
-                textSpan.textContent = "Player";
-                noTextSpan.style.display = "none";
+                    textSpan.textContent = "Player";
+                    noTextSpan.style.display = "none";
                 } 
                 clearInterval(interval);
                 introPlayed = true;
@@ -253,7 +270,7 @@
             hiddenInput.focus();
             const introHandler = (event) => intro(event, inputCursor, textSpan, noTextSpan, hiddenInput); 
             document.addEventListener('keydown', introHandler);
-            hiddenInput.addEventListener('input', introHandler);
+            document.addEventListener('input', introHandler);
             window.introHandlerRef = introHandler; 
         }
     });

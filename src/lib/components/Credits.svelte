@@ -132,7 +132,7 @@
                 </div>
             </div>
             <div class="row-container">
-                <CreditsRow class="credits-row" category="Director"/>
+                <CreditsRow category="Director"/>
             </div>
         </div>
     </div>
@@ -151,7 +151,7 @@
                 </div>
             </div>
             <div class="row-container">
-                <CreditsRow class="credits-row" category="Producer"/>
+                <CreditsRow category="Producer"/>
             </div>
         </div>
     </div>
@@ -171,7 +171,7 @@
                 </div>
             </div>
             <div class="row-container">
-                <CreditsRow class="credits-row" category="Engineers"/>
+                <CreditsRow category="Engineers"/>
             </div>
         </div>
     </div>
@@ -191,7 +191,7 @@
                 </div>
             </div>
             <div class="row-container">
-                <CreditsRow class="credits-row" category="Narrative"/>
+                <CreditsRow category="Narrative"/>
             </div>
         </div>
     </div>
@@ -209,7 +209,7 @@
                 </div>
             </div>
             <div class="row-container">
-                <CreditsRow class="credits-row" category="Artists"/>
+                <CreditsRow category="Artists"/>
             </div>
         </div>
     </div>
@@ -225,7 +225,7 @@
                 </div>
             </div>
             <div class="row-container">
-                <CreditsRow class="credits-row" category="Audio"/>
+                <CreditsRow category="Audio"/>
             </div>
         </div>
     </div>
@@ -245,7 +245,7 @@
                 </div>
             </div>
             <div class="row-container">
-                <CreditsRow class="credits-row" category="Marketing"/>
+                <CreditsRow category="Marketing"/>
             </div>
         </div>
     </div>

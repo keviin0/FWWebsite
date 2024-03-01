@@ -15,10 +15,12 @@
                 const deltaY = (y - centerY) * 0.1;
 
                 this.style.transform = `translate(${deltaX}px, ${deltaY}px) scale(1.05)`;
+                this.style.zIndex = "1";
             });
 
             card.addEventListener('mouseleave', function() {
                 this.style.transform = 'translate(0%, 0%)';
+                this.style.zIndex = "0";
             });
         });
     });
