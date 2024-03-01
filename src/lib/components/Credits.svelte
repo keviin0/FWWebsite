@@ -295,7 +295,7 @@
     }
 
     .row-container {
-        background-color: #41494D;
+        background-color: black;
         width: 100%;
     }
 
