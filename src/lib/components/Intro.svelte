@@ -33,6 +33,14 @@
         var nameGlitch = new Audio('/assets/04_name_glitch.wav');
         var titleStinger = new Audio('/assets/05_title_stinger.wav');
 
+        function playAudio(audio) {
+            if (!audio.paused) {
+                audio.pause();
+                audio.currentTime = 0;
+            }
+            audio.play();
+        }
+
         function updateHint() {
             document.getElementById("no-text").textContent = hints[++hintIndex % hints.length];
         }
@@ -122,8 +130,8 @@
 		    nameGlitch.pause();
 		    mainLoop.pause();
 		    titleStinger.play();
-                    clearInterval(interval);
-                }
+                clearInterval(interval);
+            }
             }, 100);
         }
 
@@ -193,7 +201,7 @@
 
         function intro(event, inputCursor, textSpan, noTextSpan, hiddenInput) {
             if (event.key === "Enter") {
-		loadBar.play();
+		        loadBar.play();
                 event.preventDefault();
                 skip = true;
                 document.removeEventListener('keydown', window.introHandlerRef);
@@ -211,14 +219,14 @@
             switch(event.type) {
                 case 'input':
                     if (re.test(event.target.value) && textSpan.textContent.length + event.target.value.length < 16) {
-			typing.play();
+			            new Audio('/assets/02_typing.wav').play();
                         textSpan.textContent += event.target.value;
                     }
                     event.target.value = "";
                     break;
                 case 'keydown':
                     if (event.key === "Backspace")  {
-			typing.play();
+			            playAudio(typing);
                         textSpan.textContent = textSpan.textContent.slice(0, -1);
                     }
                 break;
