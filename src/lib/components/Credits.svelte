@@ -83,17 +83,29 @@
                 let ancestor = span.closest('.credits-container');
                 let rowContainer = ancestor.querySelector('.row-container');
 
-                // Toggle the open class for rowContainer
+                // Check if the rowContainer is already open
                 if (rowContainer.classList.contains('open')) {
+                    // Close the rowContainer by resetting its max-height
+                    rowContainer.style.maxHeight = null;
                     rowContainer.classList.remove('open');
                 } else {
+                    // Open the rowContainer by setting its max-height to its scrollHeight
+                    // Ensure all other containers are closed first
                     document.querySelectorAll('.row-container.open').forEach(openRow => {
+                        openRow.style.maxHeight = null;
                         openRow.classList.remove('open');
                     });
                     rowContainer.classList.add('open');
+                    rowContainer.style.maxHeight = rowContainer.scrollHeight + "px";
                 }
 
                 propagateSpan(span);
+            });
+
+            span.addEventListener('resize', () => {
+                document.querySelectorAll('.row-container.open').forEach(openRow => {
+                    rowContainer.style.maxHeight = rowContainer.scrollHeight + "px";
+                });
             });
 
             span.addEventListener('mouseenter', () => hoverGlitch(span));
@@ -120,7 +132,7 @@
                 </div>
             </div>
             <div class="row-container">
-                <CreditsRow class="credits-row"/>
+                <CreditsRow class="credits-row" category="Director"/>
             </div>
         </div>
     </div>
@@ -139,7 +151,7 @@
                 </div>
             </div>
             <div class="row-container">
-                <CreditsRow class="credits-row"/>
+                <CreditsRow class="credits-row" category="Producer"/>
             </div>
         </div>
     </div>
@@ -159,7 +171,7 @@
                 </div>
             </div>
             <div class="row-container">
-                <CreditsRow class="credits-row"/>
+                <CreditsRow class="credits-row" category="Engineers"/>
             </div>
         </div>
     </div>
@@ -179,7 +191,7 @@
                 </div>
             </div>
             <div class="row-container">
-                <CreditsRow class="credits-row"/>
+                <CreditsRow class="credits-row" category="Narrative"/>
             </div>
         </div>
     </div>
@@ -197,7 +209,7 @@
                 </div>
             </div>
             <div class="row-container">
-                <CreditsRow class="credits-row"/>
+                <CreditsRow class="credits-row" category="Artists"/>
             </div>
         </div>
     </div>
@@ -213,7 +225,27 @@
                 </div>
             </div>
             <div class="row-container">
-                <CreditsRow class="credits-row"/>
+                <CreditsRow class="credits-row" category="Audio"/>
+            </div>
+        </div>
+    </div>
+    <div class="credits-container">
+        <div class="category-container">
+            <div class="word-container">
+                <div class="line">
+                    <span>M</span>
+                    <span>A</span>
+                    <span>R</span>
+                    <span>K</span>
+                    <span>E</span>
+                    <span>T</span>
+                    <span>I</span>
+                    <span>N</span>
+                    <span>G</span>
+                </div>
+            </div>
+            <div class="row-container">
+                <CreditsRow class="credits-row" category="Marketing"/>
             </div>
         </div>
     </div>
@@ -255,7 +287,7 @@
     }
 
     :global(.row-container.open) {
-        max-height: calc(42vh + 40px); /* Example value */
+        margin-bottom: 20px;
     }
 
     .wrapper {
