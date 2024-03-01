@@ -79,7 +79,7 @@
         }
 
         spans.forEach(span => {
-            span.addEventListener('click', () => {
+            span.addEventListener('mousedown', () => {
                 let ancestor = span.closest('.credits-container');
                 let rowContainer = ancestor.querySelector('.row-container');
 
