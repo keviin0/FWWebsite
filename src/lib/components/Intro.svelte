@@ -87,6 +87,8 @@
             
             const textSpan = document.getElementById("text");
             textSpan.setAttribute("title", textSpan.textContent);
+            textSpan.style.display = "inline-block";  // Allows the span to grow with its content
+            textSpan.style.textAlign = "center";
             textSpan.style.position = "fixed";
             textSpan.style.top = "50%";
             textSpan.style.left = "50%";
