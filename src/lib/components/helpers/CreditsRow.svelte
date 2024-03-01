@@ -11,7 +11,7 @@
                 const centerX = rect.width/4;
                 const centerY = rect.height / 4;
 
-                const deltaX = (x - centerX) * 0.1;
+                const deltaX = (x - centerX - 80) * 0.1;
                 const deltaY = (y - centerY) * 0.1;
 
                 this.style.transform = `translate(${deltaX}px, ${deltaY}px) scale(1.05)`;
