@@ -76,6 +76,10 @@
     .card-group-container {
         width: 100%;
     }
+
+    .person-info {
+        height: 40%;
+    }
 }
 
 
