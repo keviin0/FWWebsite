@@ -34,7 +34,7 @@
 
             var bottomVal = bottomContainer.getBoundingClientRect().bottom;
             var topVal = topContainer.getBoundingClientRect().top;
-            var scrollPercentage = clamp((window.innerHeight - topVal)/ (bottomVal - topVal), 0.6, 1.7);
+            var scrollPercentage = clamp((window.innerHeight - topVal)/ (bottomVal - topVal), 0.6, 1.8);
 
             elements.forEach(function(element) {
                 var translateYValue = 65 - scrollPercentage * 65;
@@ -48,7 +48,7 @@
 
     <div class="wrapper">
         <div class="container">
-            <div class="section-label">Trailer</div>
+            <div class="section-label">TRAILER</div>
             <div id="trailer-container" class="section-item">
                 <div id="trailer-video-container">
                     <!-- svelte-ignore a11y-media-has-caption -->
@@ -57,8 +57,11 @@
                     </video>
                 </div>
             </div>
-
-            <div class="section-label">About Our Game</div>
+            <div class="section-label">ABOUT OUR GAME</div>
+            <div class="section-subtext">
+                Free Will is a <strong>2D psychological puzzle RPG suffering from corruption</strong>. 
+                Playing this game means you accept the responsibility of cleansing Corruption from its system.
+            </div>
             <div id="context-container" class="reversed-section-item">
                 <div id="context-inner-container" class="left-section-inner title">
                     <div class="circle">
@@ -70,10 +73,7 @@
                 </div>
                 <div id="context-description-container" class="right-section-inner">
                     <div id="context-description-text"  class="regular-text">
-                        Free Will is a <strong>2D psychological puzzle RPG suffering from corruption</strong>. 
-                        Playing this game means you accept the responsibility of cleansing Corruption from its system.<br>
-                        <br>
-                        STORY<br>
+                        <h1>STORY</h1>
                         Control Will, a young boy who has been bedridden for most of his life, as he fights against reality-breaking monsters. <br>
                         Watch as Will tries to understand the depth of his own autonomy. <br>
                         And play out <strong>your role</strong> in cleansing the game.
@@ -92,7 +92,7 @@
                 <div id="os-video-container" class="right-section-inner">
                     <!-- svelte-ignore a11y-media-has-caption -->
                     <div id="os-description-text"  class="regular-text">
-                        FEATURES<br>
+                        <h1>FEATURES</h1>
                         > Manipulate the game's file structure through metapuzzles to influence Will's world. <br>
                         > Get to know Will--he knows you are there… <br>
                         > Cleanse the corruption. For there is no other way forward. <br>

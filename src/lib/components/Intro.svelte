@@ -318,9 +318,13 @@
     <link
 		rel="preload"
 		href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap"
-		as="font"
+		as="style"
 		crossOrigin
 	/>
+    <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap"
+    />
     <div id="intro-wrapper" class="wrapper">
         <form id = "text-container" on:submit|preventDefault>
         <span id="arrow">></span>

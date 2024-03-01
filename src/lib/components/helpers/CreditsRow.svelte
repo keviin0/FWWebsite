@@ -109,6 +109,50 @@
                     </div>
                 </div>
             </div>
+            <div class="card">
+                <a target="_blank" href>
+                <div class="person-info">
+                    <div class="person-name">
+                        Mike McVey
+                    </div>
+                    <div class="person-role">
+                        Lead Programmer
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <a target="_blank" href>
+                <div class="person-info">
+                    <div class="person-name">
+                        Hao Liu
+                    </div>
+                    <div class="person-role">
+                        Programmer
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <a target="_blank" href>
+                <div class="person-info">
+                    <div class="person-name">
+                        Jiyan (Jerry) Xu
+                    </div>
+                    <div class="person-role">
+                        Programmer
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <a target="_blank" href>
+                <div class="person-info">
+                    <div class="person-name">
+                        Jessica (Tobi) Xu
+                    </div>
+                    <div class="person-role">
+                        QA
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     {/if}
@@ -120,6 +164,17 @@
                 <div class="person-info">
                     <div class="person-name">
                         Grace Mei Ng
+                    </div>
+                    <div class="person-role">
+                        Writer
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <a target="_blank" href>
+                <div class="person-info">
+                    <div class="person-name">
+                        Vittoria Barone
                     </div>
                     <div class="person-role">
                         Writer
@@ -154,6 +209,17 @@
                     </div>
                 </div>
             </div>
+            <div class="card">
+                <a target="_blank" href>
+                <div class="person-info">
+                    <div class="person-name">
+                        Xiaodan Zhang
+                    </div>
+                    <div class="person-role">
+                        Artists
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     {/if}
@@ -182,6 +248,17 @@
                     </div>
                 </div>
             </div>
+            <div class="card">
+                <a target="_blank" href>
+                <div class="person-info">
+                    <div class="person-name">
+                        Alex Le
+                    </div>
+                    <div class="person-role">
+                        SFX
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     {/if}
@@ -196,6 +273,17 @@
                     </div>
                     <div class="person-role">
                         Lead Marketing Manager/ Assistant Producer
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <a target="_blank" href>
+                <div class="person-info">
+                    <div class="person-name">
+                        Timothy Xayasomloth
+                    </div>
+                    <div class="person-role">
+                        Marketing Writer
                     </div>
                 </div>
             </div>

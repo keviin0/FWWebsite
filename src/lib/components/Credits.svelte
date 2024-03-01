@@ -116,7 +116,7 @@
 
 
 <div class="wrapper">
-    <div class="section-label">Meet the team</div>
+    <div class="section-label">MEET THE TEAM</div>
     <div class="credits-container">
         <div class="category-container">
             <div class="word-container">
@@ -254,15 +254,6 @@
 
 <style>
     @import '../../styles/fonts.css';
-
-    .section-label {
-        margin-bottom: calc(3.84615vw + 25px);
-        margin-top: calc(3.84615vw + 57.69231px);
-        font-family: "DotGothic16", sans-serif;
-        color: #fffee9;
-        width: 100%;
-        text-align: center;
-    }
 
     .category-container {
         margin-bottom: calc(1vw);

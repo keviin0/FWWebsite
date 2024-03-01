@@ -33,7 +33,7 @@ a {
     justify-content: center;
     width: 100%;
     height: min-content;
-    margin-top: 1.25vw;
+    margin-top: 2.7vh;
     align-items: center;
     flex-direction: column;
     line-height: 0;
@@ -47,7 +47,7 @@ a {
 
 .small-logo {
     width: auto;
-    height: clamp(1.5rem, 5vw, 10rem);
+    height: clamp(2rem, 5vw, 10rem);
     transform: translate(0, 12px);
     margin-top: 1.5vw;
 }
