@@ -49,27 +49,10 @@
 
         function preloadAssets() {
             const assetsToPreload = [
-                '/assets/free_will_logo_glitch_red.png',
-                '/assets/steam_logo_black.svg',
-                '/assets/steam_logo_white.svg',
-                '/assets/discord_logo_black.svg',
-                '/assets/discord_logo_red.svg',
-                '/assets/scroll.svg',
                 '/assets/will_sprite.svg',
                 '/assets/windows_logo_white.svg',
-                '/assets/FWTrailer_03.mp4',
-                '/assets/pfps/celine.png',
-                '/assets/pfps/lena.png',
-                '/assets/pfps/daniel.png',
-                '/assets/pfps/kevin_head.jpeg',
-                '/assets/pfps/julia.jpg',
-                '/assets/pfps/ally.jpg',
-                '/assets/pfps/grace.jpeg',
-                '/assets/pfps/jasmine.png',
-                '/assets/pfps/icemasterx.jpg',
-                '/assets/pfps/johh.jpg',
-                '/assets/pfps/justin.jpg',
-                '/assets/pfps/skylar.jpeg'
+                '/assets/free_will_logo_glitch_red.png',
+                '/assets/FWTrailer_03.mp4'
             ];
 
             assetsToPreload.forEach((href) => {
@@ -330,6 +313,12 @@
 </style>
 
 {#if !animationFinished}
+    <link
+		rel="preload"
+		href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap"
+		as="font"
+		crossOrigin
+	/>
     <div id="intro-wrapper" class="wrapper">
         <form id = "text-container" on:submit|preventDefault>
         <span id="arrow">></span>

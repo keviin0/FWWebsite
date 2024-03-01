@@ -27,8 +27,6 @@
         }
     });
 
-    
-
     let logo = '/assets/free_will_logo_glitch_red.png'
     let defaultSteamImageSrc = '/assets/steam_logo_black.svg';
     let hoverSteamImageSrc = '/assets/steam_logo_white.svg';
