@@ -14,7 +14,7 @@
     font-size: clamp(1rem, 3vw, 1.5rem);
     color: #fffee9;
     width: 100%;
-    text-align: center; /* Center the text horizontally */
+    text-align: center;
     white-space: normal;
 }
 
@@ -42,7 +42,7 @@
 
 .card {
     aspect-ratio: 5 / 7;
-    width: 30vmin;
+    width: 25vmin;
     margin: 20px 20px 20px 20px;
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.7);
     transition: transform 0.1s ease-out;
@@ -53,7 +53,7 @@
 }
 
 .card-group-container {
-    width: 85%;
+    width: 75%;
 }
 
 @media only screen and (max-width: 1390px) {
@@ -63,7 +63,7 @@
     }
 
     .card-group-container {
-        width: 100%;
+        width: 90%;
     }
 }
 
