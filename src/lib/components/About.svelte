@@ -6,6 +6,8 @@
     onMount(() => {
         const adjustedHeight = window.innerHeight / 1.5;
         const denominator = document.getElementById('scroll-down').getBoundingClientRect().top - adjustedHeight;
+        const logo = document.getElementById("logo");
+        logo.style.opacity = 1;
 
         setTimeout(() => {
             let elements = document.getElementsByClassName("fade-in");

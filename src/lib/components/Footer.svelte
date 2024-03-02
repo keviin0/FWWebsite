@@ -56,7 +56,11 @@
     .footer-subtext {
         margin-top: 1em;
         font-family: "Fira Code", monospace;
-        font-size: 1rem;
+        font-size: clamp(0.8rem, 1vw, 3rem);
         color: #FFFEE9; 
+    }
+
+    #s-logo-container {
+        margin-bottom: 10px;
     }
 </style>
