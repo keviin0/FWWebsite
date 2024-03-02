@@ -109,6 +109,7 @@
                     </div>
                 </div>
             </div>
+            <div class="section-label">SCREENSHOTS</div>
             <div class="screenshots">
                 {#each images as image}
                     <a target="_blank" href={`/assets/screenshots/${image}`}>
