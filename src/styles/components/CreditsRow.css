@@ -22,6 +22,7 @@
     font-family: 'DotGothic16', sans-serif;
     font-size: clamp(0.5rem, 2vw, 1rem);
     color: #fffee9;
+    width: 95%;
 }
 
 .card a {
