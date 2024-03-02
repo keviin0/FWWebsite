@@ -277,7 +277,7 @@
     }
 
     .wrapper {
-        height: 100vh; /* This ensures that the wrapper takes the full viewport height */
+        height: 80vh;
     }
 
     .row-container {
@@ -289,7 +289,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center; /* This will center the word-container vertically */
+        justify-content: center;
     }
 
     .word-container {
@@ -301,7 +301,7 @@
         display: flex;
         justify-content: space-between;
         color: #fffee9;
-        font-size: clamp(2vw, 8vh, 8vw);
+        font-size: clamp(2vw, 6vh, 8vw);
     }
 
     .line span {

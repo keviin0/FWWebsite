@@ -40,7 +40,6 @@
     border-radius: 50%;
 }
 
-.circular-text, 
 .context-text, 
 .os-text {
     position: absolute;
@@ -70,10 +69,6 @@ h1
     color: #FFFEE9; 
     font-stretch: 120%;  
     height: 50%;
-}
-
-#filler {
-    height: 100vh;
 }
 
 .hovering-picture {
@@ -160,7 +155,7 @@ strong {
     15%, 20% {
         transform: rotate(54deg);
     }
-    20%, 25% { /* Corrected interval */
+    20%, 25% { 
         transform: rotate(72deg);
     }
     25%, 30% {
