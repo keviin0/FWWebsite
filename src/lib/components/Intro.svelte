@@ -29,6 +29,7 @@
 		
         var mainLoop = mainLoop = new Audio('/assets/01_main_loop.wav');
         var typing = new Audio('/assets/02_typing.wav');
+        typing.volume = 0.25;
         var loadBar = new Audio('/assets/03_black_screen_coming_down.wav');
         var nameGlitch = new Audio('/assets/04_name_glitch.wav');
         var titleStinger = new Audio('/assets/05_title_stinger.wav');
@@ -52,7 +53,17 @@
                 '/assets/will_sprite.svg',
                 '/assets/windows_logo_white.svg',
                 '/assets/free_will_logo_glitch_red.png',
-                '/assets/FWTrailer_03.mp4'
+                '/assets/FWTrailer_03.mp4',
+                '/assets/screenshots/p1.png',
+                '/assets/screenshots/p2.png',
+                '/assets/screenshots/p3.png',
+                '/assets/screenshots/p4.png',
+                '/assets/screenshots/p5.png',
+                '/assets/screenshots/p6.png',
+                '/assets/screenshots/p7.png',
+                '/assets/screenshots/p8.png',
+                '/assets/screenshots/p9.png',
+                '/assets/screenshots/p10.png'
             ];
 
             assetsToPreload.forEach((href) => {
@@ -132,12 +143,12 @@
                     redSpan.remove();
                     greySpan.remove();
                     animationDone.set(true);
-		    nameGlitch.pause();
-		    mainLoop.pause();
-		    titleStinger.play();
-                clearInterval(interval);
-            }
-            }, 100);
+                    nameGlitch.pause();
+                    mainLoop.pause();
+                    titleStinger.play();
+                    clearInterval(interval);
+                }
+                }, 100);
         }
 
         function getCharacterWidth(character, element) {
@@ -221,7 +232,9 @@
             switch(event.type) {
                 case 'input':
                     if (re.test(event.target.value) && textSpan.textContent.length + event.target.value.length < 16) {
-			            new Audio('/assets/02_typing.wav').play();
+			            let temp = new Audio('/assets/02_typing.wav')
+                        temp.volume = 0.25;
+                        temp.play();
                         textSpan.textContent += event.target.value;
                     }
                     event.target.value = "";

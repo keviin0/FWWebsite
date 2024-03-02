@@ -24,10 +24,6 @@
     max-height: calc(42vh + 40px);
 }
 
-.wrapper {
-    height: 100vh;
-}
-
 .row-container {
     background-color: #41494D;
     width: 100%;

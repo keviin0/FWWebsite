@@ -121,10 +121,10 @@
                 </div>
             </div>
             <div class="card">
-                <a target="_blank" href>
+                <a target="_blank" href="https://www.haochengliu.com" style="background-image: url('/assets/pfps/hao.png'); background-position: 35% 50%; background-size: 110%">
                 <div class="person-info">
                     <div class="person-name">
-                        Hao Liu
+                        Haocheng Liu
                     </div>
                     <div class="person-role">
                         Programmer
