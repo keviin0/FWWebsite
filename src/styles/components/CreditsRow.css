@@ -10,7 +10,7 @@
 }
 
 .person-name {
-    font-family: 'DotGothic16', sans-serif;
+    font-family: "Fira Code", monospace;
     font-size: clamp(1rem, 3vw, 1.5rem);
     color: #fffee9;
     width: 95%;
@@ -19,7 +19,7 @@
 }
 
 .person-role {
-    font-family: 'DotGothic16', sans-serif;
+    font-family: "Fira Code", monospace;
     font-size: clamp(0.5rem, 2vw, 1rem);
     color: #fffee9;
     width: 95%;
@@ -60,7 +60,7 @@
 
 @media only screen and (max-width: 1390px) {
     .card {
-        width: 35vmin;
+        width: 25vmin;
         margin: 10px 10px 10px 10px;
     }
 
@@ -71,7 +71,7 @@
 
 @media only screen and (max-width: 632px) {
     .card {
-        width: 40vmin;
+        width: 35vmin;
         margin: 10px 10px 10px 10px;
     }
 
