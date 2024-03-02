@@ -276,10 +276,6 @@
         margin-bottom: 20px;
     }
 
-    .wrapper {
-        height: 80vh;
-    }
-
     .row-container {
         background-color: black;
         width: 100%;
