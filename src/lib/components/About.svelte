@@ -1,7 +1,7 @@
 <script>
     import { onMount } from 'svelte';
 
-    const clamp = (num, min, max) => Math.min(Math.max(num, min), max)
+    const clamp = (num, min, max) => Math.min(Math.max(num, min), max);
 
     onMount(() => {
         const adjustedHeight = window.innerHeight / 1.5;
@@ -20,16 +20,12 @@
             var element = document.getElementById('scroll-down');
             if (!element) return;
 
-            document.getElementById('scroll-down').style.transition = "opacity 0.1s ease-in-out";
-            console.log(adjustedHeight);
-            console.log(element.getBoundingClientRect().top);
+            document.getElementById('scroll-down').style.transition = "opacity 0.7s ease-in-out";
             
             var newOpacity = clamp((element.getBoundingClientRect().top - adjustedHeight)/denominator, 0, 1);
             element.style.opacity = newOpacity;
         }
     });
-
-    
 
     let logo = '/assets/free_will_logo_glitch_red.png'
     let defaultSteamImageSrc = '/assets/steam_logo_black.svg';
@@ -73,5 +69,5 @@
 
 
 <style>
-    @import "../../styles/About.css";
+    @import "../../styles/components/About.css";
 </style>
