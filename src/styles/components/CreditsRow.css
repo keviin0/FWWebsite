@@ -23,6 +23,7 @@
     font-size: clamp(0.5rem, 2vw, 1rem);
     color: #fffee9;
     width: 95%;
+    margin-bottom: 2vh;
 }
 
 .card a {
