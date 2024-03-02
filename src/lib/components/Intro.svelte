@@ -52,7 +52,17 @@
                 '/assets/will_sprite.svg',
                 '/assets/windows_logo_white.svg',
                 '/assets/free_will_logo_glitch_red.png',
-                '/assets/FWTrailer_03.mp4'
+                '/assets/FWTrailer_03.mp4',
+                '/assets/screenshots/p1.png',
+                '/assets/screenshots/p2.png',
+                '/assets/screenshots/p3.png',
+                '/assets/screenshots/p4.png',
+                '/assets/screenshots/p5.png',
+                '/assets/screenshots/p6.png',
+                '/assets/screenshots/p7.png',
+                '/assets/screenshots/p8.png',
+                '/assets/screenshots/p9.png',
+                '/assets/screenshots/p10.png'
             ];
 
             assetsToPreload.forEach((href) => {
@@ -132,12 +142,12 @@
                     redSpan.remove();
                     greySpan.remove();
                     animationDone.set(true);
-		    nameGlitch.pause();
-		    mainLoop.pause();
-		    titleStinger.play();
-                clearInterval(interval);
-            }
-            }, 100);
+                    nameGlitch.pause();
+                    mainLoop.pause();
+                    titleStinger.play();
+                    clearInterval(interval);
+                }
+                }, 100);
         }
 
         function getCharacterWidth(character, element) {
