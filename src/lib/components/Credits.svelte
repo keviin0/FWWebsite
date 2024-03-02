@@ -212,12 +212,9 @@
         <div class="category-container">
             <div class="word-container">
                 <div class="line">
-                    <span>M</span>
                     <span>A</span>
-                    <span>R</span>
-                    <span>K</span>
-                    <span>E</span>
-                    <span>T</span>
+                    <span>U</span>
+                    <span>D</span>
                     <span>I</span>
                     <span>O</span>
                 </div>
