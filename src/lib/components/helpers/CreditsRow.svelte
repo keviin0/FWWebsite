@@ -83,7 +83,7 @@
                         Kevin Hu
                     </div>
                     <div class="person-role">
-                        Resident QA Janitor / Web Dev
+                        QA Lead / Web Dev
                     </div>
                 </div>
             </div>
