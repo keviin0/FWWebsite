@@ -66,6 +66,17 @@
     <div class="card-group-container">
         <div class='card-group'>
             <div class="card">
+                <a target="_blank" href="https://mike10mcvey.wixsite.com/portfolio" style="background-image: url('/assets/pfps/mike.jpg'); background-position: 35% 50%; background-size: 160%">
+                <div class="person-info">
+                    <div class="person-name">
+                        Mike McVey
+                    </div>
+                    <div class="person-role">
+                        Lead Programmer
+                    </div>
+                </div>
+            </div>
+            <div class="card">
                 <a target="_blank" href="https://dyu1112.github.io/" style="background-image: url('/assets/pfps/daniel.png'); background-position: 35% 50%">
                 <div class="person-info">
                     <div class="person-name">
@@ -106,17 +117,6 @@
                     </div>
                     <div class="person-role">
                         Programmer
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <a target="_blank" href>
-                <div class="person-info">
-                    <div class="person-name">
-                        Mike McVey
-                    </div>
-                    <div class="person-role">
-                        Lead Programmer
                     </div>
                 </div>
             </div>
