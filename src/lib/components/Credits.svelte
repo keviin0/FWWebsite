@@ -303,5 +303,8 @@
     .line span {
         font-family: 'Apple', sans-serif;
         cursor: pointer;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        user-select: none; 
     }
 </style>
