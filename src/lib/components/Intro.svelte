@@ -29,6 +29,7 @@
 		
         var mainLoop = mainLoop = new Audio('/assets/01_main_loop.wav');
         var typing = new Audio('/assets/02_typing.wav');
+        typing.volume = 0.25;
         var loadBar = new Audio('/assets/03_black_screen_coming_down.wav');
         var nameGlitch = new Audio('/assets/04_name_glitch.wav');
         var titleStinger = new Audio('/assets/05_title_stinger.wav');
@@ -231,7 +232,9 @@
             switch(event.type) {
                 case 'input':
                     if (re.test(event.target.value) && textSpan.textContent.length + event.target.value.length < 16) {
-			            new Audio('/assets/02_typing.wav').play();
+			            let temp = new Audio('/assets/02_typing.wav')
+                        temp.volume = 0.25;
+                        temp.play();
                         textSpan.textContent += event.target.value;
                     }
                     event.target.value = "";
