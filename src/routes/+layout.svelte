@@ -7,23 +7,21 @@
     import About from '$lib/components/About.svelte';
 	import Trailer from '$lib/components/Trailer.svelte';
 	import Credits from '$lib/components/Credits.svelte'
-	import Footer from '$lib/components/Footer.svelte';
 
 	let animation;
 
 	animationDone.subscribe((value) => {
-	animation = value;
+		animation = value;
 	});
-
+	
 	inject({ mode: dev ? 'development' : 'production' });
 </script>
 
 {#if !animation}
-<Intro/>
+	<Intro/>
 {:else}
 	<About/>
 	<Trailer/>
 	<Credits/>
   	<slot />
-	<Footer/>
 {/if}
