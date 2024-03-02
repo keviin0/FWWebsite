@@ -13,7 +13,7 @@
     font-family: 'DotGothic16', sans-serif;
     font-size: clamp(1rem, 3vw, 1.5rem);
     color: #fffee9;
-    width: 100%;
+    width: 95%;
     text-align: center;
     white-space: normal;
 }
@@ -23,7 +23,7 @@
     font-size: clamp(0.5rem, 2vw, 1rem);
     color: #fffee9;
     width: 95%;
-    margin-bottom: 2vh;
+    margin-bottom: 3vh;
 }
 
 .card a {

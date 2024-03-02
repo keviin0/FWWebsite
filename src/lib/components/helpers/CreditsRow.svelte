@@ -191,7 +191,7 @@
                 <a target="_blank" href="https://fanmingye.wixsite.com/mingyefan" style="background-image: url('/assets/pfps/jasmine.png'); background-position: 35% 50%">
                 <div class="person-info">
                     <div class="person-name">
-                        Mingye Fan (Jasmine)
+                        Mingye (Jasmine) Fan
                     </div>
                     <div class="person-role">
                         Marketing Artist/ Inventory Artist
@@ -252,7 +252,7 @@
                 <a target="_blank" href>
                 <div class="person-info">
                     <div class="person-name">
-                        Alex Le
+                        Cryptanark
                     </div>
                     <div class="person-role">
                         SFX
