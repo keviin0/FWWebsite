@@ -64,8 +64,8 @@ h1
 
 .regular-text,
 .section-subtext {
-    font-family: "DotGothic16", sans-serif;
-    font-size: 1rem;
+    font-family: "Fira Code", monospace;
+    font-size: 1.3rem;
     line-height: 1.6;
     color: #FFFEE9; 
     font-stretch: 120%;  
@@ -226,6 +226,12 @@ strong {
 
 @media only screen and (min-width: 768px) {
     .reversed-section-item {
-        flex-direction: row-reverse; /* Reverse the order */
+        flex-direction: row-reverse;
+    }
+}
+
+@media only screen and (min-width: 1492px) {
+    #context-description-text {
+        width: 90%;
     }
 }

@@ -11,7 +11,7 @@ body {
 .section-label {
     margin-bottom: calc(50px);
     margin-top: calc(3.84615vw + 57.69231px);
-    font-family: "DotGothic16", sans-serif;
+    font-family: "Fira Code", monospace;
     font-size: 40px;
     color: #fffee9;
     width: 100%;
