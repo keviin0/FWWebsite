@@ -1,0 +1,62 @@
+<script>
+    import { onMount } from 'svelte';
+    onMount(() => {
+        setTimeout(() => {
+            let elements = document.getElementsByClassName("subheader-container");
+            Array.from(elements).forEach(element => {
+                element.style.opacity = 1;
+            });
+        }, 500);
+    });
+    let defaultInstagramImageSrc = '/assets/instagram_logo_white.svg';
+    let hoverInstagramImageSrc = '/assets/instagram_logo_red.svg';
+    let defaultTiktokImageSrc = '/assets/Tiktok_logo_white.svg';
+    let hoverTiktokImageSrc = '/assets/Tiktok_logo_red.svg';
+    let defaultTwitterImageSrc = '/assets/twitter-x_logo_white.svg';
+    let hoverTwitterImageSrc = '/assets/twitter-x_logo_red.svg';
+
+    let currentInstagramImageSrc = defaultInstagramImageSrc;
+    let currentTiktokImageSrc = defaultTiktokImageSrc;
+    let currentTwitterImageSrc = defaultTwitterImageSrc;
+    function instagram_hover() {
+        currentInstagramImageSrc = hoverInstagramImageSrc;
+    }
+    function instagram_unhover() {
+        currentInstagramImageSrc = defaultInstagramImageSrc;
+    }
+    function tiktok_hover() {
+        currentTiktokImageSrc = hoverTiktokImageSrc;
+    }
+    function tiktok_unhover() {
+        currentTiktokImageSrc = defaultTiktokImageSrc;
+    }
+    function twitter_hover() {
+        currentTwitterImageSrc = hoverTwitterImageSrc;
+    }
+    function twitter_unhover() {
+        currentTwitterImageSrc = defaultTwitterImageSrc;
+    }
+</script>
+
+<div class='footer-container'>
+    <div id='s-logo-container'>
+        <a href="https://www.instagram.com/freewill_game/" target="_blank"><img class="small-logo" id="instagram-logo" alt="instagram logo" src = {currentInstagramImageSrc} on:mouseover={instagram_hover} on:mouseout={instagram_unhover}/></a>
+        <a href="https://www.tiktok.com/@freewillgame" target="_blank"><img class="small-logo" id="tiktok-logo" alt="tiktok logo" src = {currentTiktokImageSrc} on:mouseover={tiktok_hover} on:mouseout={tiktok_unhover}/></a>
+        <a href="https://twitter.com/FreeWill_Game" target="_blank"><img class="small-logo" id="twitter-logo" alt="twitter logo" src = {currentTwitterImageSrc} on:mouseover={twitter_hover} on:mouseout={twitter_unhover}/></a>
+    </div>
+    <div class='footer-subtext'>
+        All Materials Here Belong to Team Free Will
+    </div>
+</div>
+
+<style>
+    @import "../../styles/components/About.css";
+    @import "../../styles/components/Footer.css";
+
+    .footer-subtext {
+        margin-top: 1em;
+        font-family: "Fira Code", monospace;
+        font-size: 1rem;
+        color: #FFFEE9; 
+    }
+</style>
