@@ -5,6 +5,15 @@
         let windows = '/assets/windows_logo_white.svg';
         let trailer_video = '/assets/FWTrailer_03.mp4';
 
+        let imageNamePattern = 'p';
+        let imageExtension = '.png';
+        let totalImages = 10;
+        let images = [];
+
+        for (let i = 1; i <= totalImages; i++) {
+            images.push(`${imageNamePattern}${i}${imageExtension}`);
+        }
+
         const clamp = (num, min, max) => Math.min(Math.max(num, min), max);
 
         onMount(() => {
@@ -100,8 +109,17 @@
                     </div>
                 </div>
             </div>
+            <div class="section-label">SCREENSHOTS</div>
+            <div class="screenshots">
+                {#each images as image}
+                    <a target="_blank" href={`/assets/screenshots/${image}`}>
+                        <img class="image" src={`/assets/screenshots/${image}`} alt={image} />
+                    </a>
+                {/each}
+            </div>
         </div>
     </div>
+
 
     <style>
         @import "../../styles/components/Trailer.css";
@@ -110,4 +128,33 @@
         #trailer-video-container {
             box-shadow: 0 0 50px 10px #41494d;
         }
+
+        .screenshots > * {
+            width: calc(50% - 10px);
+            height: auto;
+            margin: 5px;
+        }
+
+        .image {
+            width: 100%;
+        }
+
+        .screenshots {
+            margin: 4em 0 4em 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            margin: auto;
+        }
+
+        @media only screen and (max-width: 800px) {
+            .screenshots > * {
+                width: calc(50% - 10px);
+                margin: 5px;
+            }
+        }
+
+        
     </style>

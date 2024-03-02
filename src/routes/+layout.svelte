@@ -6,7 +6,8 @@
 	import { animationDone } from './stores';
     import About from '$lib/components/About.svelte';
 	import Trailer from '$lib/components/Trailer.svelte';
-	import Credits from '$lib/components/Credits.svelte'
+	import Credits from '$lib/components/Credits.svelte';
+	import Footer from '$lib/components/Footer.svelte';
 
 	let animation;
 
@@ -23,5 +24,6 @@
 	<About/>
 	<Trailer/>
 	<Credits/>
+	<Footer/>
   	<slot />
 {/if}
