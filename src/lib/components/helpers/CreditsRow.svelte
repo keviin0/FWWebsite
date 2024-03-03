@@ -121,7 +121,7 @@
                 </div>
             </div>
             <div class="card">
-                <a target="_blank" href="https://www.haochengliu.com" style="background-image: url('/assets/pfps/hao.png'); background-position: 35% 50%; background-size: 110%">
+                <a target="_blank" href="https://www.haochengliu.com" style="background-image: url('/assets/pfps/hao.png'); background-position: 50% 50%; background-size: 105%">
                 <div class="person-info">
                     <div class="person-name">
                         Haocheng Liu
