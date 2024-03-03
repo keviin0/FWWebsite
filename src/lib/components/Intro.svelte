@@ -146,6 +146,8 @@
                     nameGlitch.pause();
                     mainLoop.pause();
                     titleStinger.play();
+                    mainLoop.loop = true;
+                    mainLoop.play();
                     clearInterval(interval);
                 }
                 }, 100);
