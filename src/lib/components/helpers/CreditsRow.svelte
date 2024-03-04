@@ -132,10 +132,10 @@
                 </div>
             </div>
             <div class="card">
-                <a target="_blank" href>
+                <a target="_blank" href="https://www.linkedin.com/in/jiyanxu/" style="background-image: url('/assets/pfps/jerry.jpg'); background-position: 50% 90%; background-size: 150%">
                 <div class="person-info">
                     <div class="person-name">
-                        Jiyan (Jerry) Xu
+                        Jiyan Xu (Jerry)
                     </div>
                     <div class="person-role">
                         Programmer
@@ -199,7 +199,7 @@
                 </div>
             </div>
             <div class="card">
-                <a target="_blank" href="https://www.instagram.com/milkcee12/" style="background-image: url('/assets/pfps/icemasterx.jpg'); background-position: 35% 50%">
+                <a target="_blank" href="https://www.instagram.com/milkcee12/" style="background-image: url('/assets/pfps/michaela.jpg'); background-position: 35% 50%">
                 <div class="person-info">
                     <div class="person-name">
                         Michaela Chang (milkcee12)
@@ -210,13 +210,13 @@
                 </div>
             </div>
             <div class="card">
-                <a target="_blank" href>
+                <a target="_blank" href="https://1115251618.wixsite.com/myportfolio" style="background-image: url('/assets/pfps/xiaodan.png'); background-position: 50% 50%">
                 <div class="person-info">
                     <div class="person-name">
                         Xiaodan Zhang
                     </div>
                     <div class="person-role">
-                        Artists
+                        Artist
                     </div>
                 </div>
             </div>
@@ -277,13 +277,13 @@
                 </div>
             </div>
             <div class="card">
-                <a target="_blank" href>
+                <a href target="_blank" style="background-image: url('/assets/pfps/tim.jpg'); background-position: 35% 50%">
                 <div class="person-info">
                     <div class="person-name">
                         Timothy Xayasomloth
                     </div>
                     <div class="person-role">
-                        Marketing Writer
+                        Marketing Editor
                     </div>
                 </div>
             </div>
