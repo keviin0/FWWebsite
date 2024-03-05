@@ -120,7 +120,7 @@
 
             textSpan.style.animation = "glitch 1s linear infinite";
 
-            await new Promise(r => setTimeout(r, 1600));
+            await new Promise(r => setTimeout(r, 1150));
 
             textSpan.parentNode.appendChild(greySpan);
             textSpan.parentNode.appendChild(redSpan);
@@ -148,7 +148,7 @@
                     titleStinger.play();
                     clearInterval(interval);
                 }
-                }, 100);
+                }, 80);
         }
 
         function getCharacterWidth(character, element) {
