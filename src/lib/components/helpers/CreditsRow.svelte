@@ -249,7 +249,7 @@
                 </div>
             </div>
             <div class="card">
-                <a target="_blank" href>
+                <a target="_blank" href="https://twitter.com/cryptanark?lang=en" style="background-image: url('/assets/pfps/alex.png'); background-position: 45% 50%">
                 <div class="person-info">
                     <div class="person-name">
                         Cryptanark
