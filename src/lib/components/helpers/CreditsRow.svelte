@@ -132,7 +132,7 @@
                 </div>
             </div>
             <div class="card">
-                <a target="_blank" href="https://www.linkedin.com/in/jiyanxu/" style="background-image: url('/assets/pfps/jerry.jpg'); background-position: 50% 90%; background-size: 150%">
+                <a target="_blank" href="https://www.linkedin.com/in/jiyanxu/" style="background-image: url('/assets/pfps/jerry.jpg'); background-position: 40% 90%; background-size: 150%">
                 <div class="person-info">
                     <div class="person-name">
                         Jiyan Xu (Jerry)
@@ -143,7 +143,7 @@
                 </div>
             </div>
             <div class="card">
-                <a target="_blank" href>
+                <a target="_blank" href style="background-image: url('/assets/pfps/jessica.jpg')">
                 <div class="person-info">
                     <div class="person-name">
                         Jessica (Tobi) Xu
