@@ -171,7 +171,7 @@
                 </div>
             </div>
             <div class="card">
-                <a target="_blank" href>
+                <a target="_blank" href="https://www.linkedin.com/in/vittoria-barone/" style="background-image: url('/assets/pfps/vittoria.png'); background-position: 50% 50%">
                 <div class="person-info">
                     <div class="person-name">
                         Vittoria Barone

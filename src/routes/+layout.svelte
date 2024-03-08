@@ -18,12 +18,16 @@
 	inject({ mode: dev ? 'development' : 'production' });
 </script>
 
+
+<About/>
+<Trailer/>
+<Credits/>
+<Footer/>
+<slot />
+<!--
 {#if !animation}
 	<Intro/>
 {:else}
-	<About/>
-	<Trailer/>
-	<Credits/>
-	<Footer/>
-  	<slot />
+	
 {/if}
+--->
