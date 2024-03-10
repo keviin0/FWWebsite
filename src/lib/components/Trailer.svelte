@@ -3,7 +3,7 @@
 
         let willSprite = '/assets/will_sprite.svg';
         let windows = '/assets/windows_logo_white.svg';
-        let trailer_video = '/assets/FWTrailer_03.mp4';
+        let trailer_video = '/assets/fwtrailer.mp4';
 
         let imageNamePattern = 'p';
         let imageExtension = '.png';
