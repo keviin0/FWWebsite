@@ -107,7 +107,7 @@
           <h1>STORY</h1>
           <p>
             Control Will, a young boy who has been bedridden for most of his
-            life, as he fights against reality-breaking monsters.<br />
+            life, as he fights against reality-breaking monsters.<br /><br />
             Watch as Will tries to understand the depth of his own autonomy.
             <br /><br />
             And play out <strong>your role</strong> in cleansing the game.
@@ -328,13 +328,13 @@
 
   @keyframes float {
     0% {
-        transform: translateY(7px);
+      transform: translateY(7px);
     }
     50% {
-        transform: translateY(-7px);
+      transform: translateY(-7px);
     }
     100% {
-        transform: translateY(7px);
+      transform: translateY(7px);
     }
   }
 
