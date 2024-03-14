@@ -312,6 +312,7 @@
   .line {
     display: flex;
     justify-content: space-between;
+    color: #fffee9;
     font-size: clamp(2vw, 6vh, 8vw);
   }
 
