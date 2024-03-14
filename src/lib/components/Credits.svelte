@@ -263,6 +263,7 @@
   .section-label h1 {
     font-size: 4.5rem;
     font-weight: normal;
+    filter: drop-shadow(0 0 20px #cdcdb6);
   }
 
   .category-container {
@@ -311,7 +312,6 @@
   .line {
     display: flex;
     justify-content: space-between;
-    color: #fffee9;
     font-size: clamp(2vw, 6vh, 8vw);
   }
 

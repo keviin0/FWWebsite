@@ -120,7 +120,13 @@
     pointer-events: none;
     opacity: 0;
     transition: opacity 0.25s;
-    margin-bottom: 3em;
+    margin-bottom: 2em;
+  }
+
+  @media (max-width: 800px) {
+    #logo {
+      width: 90%;
+    }
   }
 
   .subheader-text {

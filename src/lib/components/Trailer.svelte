@@ -146,7 +146,7 @@
         </div>
       </div>
     </div>
-    <div class="section-label regular-text">
+    <div class="screenshot-label regular-text">
       <h1>SCREENSHOTS</h1>
     </div>
     <div class="screenshots section-row">
@@ -205,6 +205,18 @@
 
   .section-label {
     margin-bottom: 0.5em;
+    filter: drop-shadow(0 0 20px #cdcdb6);
+  }
+
+  .screenshot-label {
+    margin-bottom: 0.5em;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .screenshot-label h1 {
+    width: fit-content;
   }
 
   .section-label.trailer {
@@ -297,6 +309,7 @@
     font-weight: normal;
     font-size: 2.2rem;
     letter-spacing: 0.1cap;
+    filter: drop-shadow(0 0 5px #8e8e82);
   }
 
   .regular-text,
@@ -306,12 +319,23 @@
   }
 
   .hovering-picture {
-    --rotate: 2deg;
     position: absolute;
-    transform: rotate(var(--rotate));
     height: 180px;
     width: auto;
-    transition: transform 0.6s cubic-bezier(0.23, 0.73, 0.58, 0.82);
+    filter: drop-shadow(0 0 20px #41494d);
+    animation: float 3.5s infinite ease-in-out;
+  }
+
+  @keyframes float {
+    0% {
+        transform: translateY(7px);
+    }
+    50% {
+        transform: translateY(-7px);
+    }
+    100% {
+        transform: translateY(7px);
+    }
   }
 
   #trailer-video {
