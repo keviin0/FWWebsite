@@ -4,6 +4,7 @@
 	import { dev } from '$app/environment';
 	import Intro from '../lib/components/Intro.svelte';
 	import { animationDone } from './stores';
+    import Spacer from '$lib/components/Spacer.svelte';
     import About from '$lib/components/About.svelte';
 	import Trailer from '$lib/components/Trailer.svelte';
 	import Credits from '$lib/components/Credits.svelte';
@@ -18,16 +19,14 @@
 	inject({ mode: dev ? 'development' : 'production' });
 </script>
 
-
+<!-- <Intro /> -->
 <About/>
 <Trailer/>
+<Spacer />
 <Credits/>
+<Spacer />
 <Footer/>
 <slot />
-<!--
-{#if !animation}
-	<Intro/>
-{:else}
-	
-{/if}
---->
+
+<style>
+</style>

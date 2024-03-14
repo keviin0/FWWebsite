@@ -1,4 +1,9 @@
 @font-face {
-    font-family:  'Apple';
-    src: url('/fonts/Apple.ttf');
+  font-family: "Apple";
+  src: url("/fonts/Apple.ttf");
+}
+
+@font-face {
+    font-family: "Monogram";
+    src: url("/fonts/monogram.ttf");
 }
