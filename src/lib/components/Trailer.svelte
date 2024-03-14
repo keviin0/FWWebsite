@@ -251,10 +251,10 @@
 
   .regular-text li:before {
     content: ">";
-    font-size: 1.5rem;
-    font-weight: bold;
+    font-size: 2rem;
     color: red;
-    padding-right: 1em;
+    padding-right: 0.75em;
+    font-family: "Monogram", monospace;
   }
 
   .regular-text h1 {
