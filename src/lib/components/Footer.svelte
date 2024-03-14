@@ -725,7 +725,7 @@
       </svg></a>
   </div>
   <div class="footer-subtext">
-    <p>All Materials Here Belong to Team Free Will</p>
+    <p>All Materials Here Belong to Team Kipps in a Box</p>
   </div>
 </div>
 
