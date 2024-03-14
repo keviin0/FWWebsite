@@ -355,7 +355,7 @@
   }
 
   .card:hover a .person-info {
-    transform: scale(0.9) translateY(-55%);
+    transform: scale(0.8) translateY(-55%);
     opacity: 1;
   }
 
