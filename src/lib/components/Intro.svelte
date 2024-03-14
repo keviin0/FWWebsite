@@ -328,9 +328,6 @@
 </style>
 
 {#if !animationFinished}
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Fira+Code:wght@300..700&display=swap" rel="stylesheet">
     <div id="intro-wrapper" class="wrapper">
         <form id = "text-container" on:submit|preventDefault>
         <span id="arrow">></span>
