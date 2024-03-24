@@ -3,23 +3,23 @@
   import { onMount } from "svelte";
 
   onMount(() => {
-    // document.querySelectorAll(".card").forEach((card) => {
-    //   card.addEventListener("mousemove", function (e) {
-    //     const rect = this.getBoundingClientRect();
-    //     const x = e.clientX - rect.left;
-    //     const y = e.clientY - rect.top;
-    //     const centerX = rect.width / 4;
-    //     const centerY = rect.height / 4;
-    //     const deltaX = (x - centerX - 80) * 0.1;
-    //     const deltaY = (y - centerY) * 0.1;
-    //     this.style.transform = `translate(${deltaX}px, ${deltaY}px) scale(1.05)`;
-    //     this.style.zIndex = "1";
-    //   });
-    //   card.addEventListener("mouseleave", function () {
-    //     this.style.transform = "translate(0%, 0%)";
-    //     this.style.zIndex = "0";
-    //   });
-    // });
+    document.querySelectorAll(".card").forEach((card) => {
+      card.addEventListener("mousemove", function (e) {
+        const rect = this.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        const centerX = rect.width / 4;
+        const centerY = rect.height / 4;
+        const deltaX = (x - centerX - 80) * 0.1;
+        const deltaY = (y - centerY) * 0.1;
+        this.style.transform = `translate(${deltaX}px, ${deltaY}px) scale(1.05)`;
+        this.style.zIndex = "1";
+      });
+      card.addEventListener("mouseleave", function () {
+        this.style.transform = "translate(0%, 0%)";
+        this.style.zIndex = "0";
+      });
+    });
   });
 </script>
 
@@ -267,7 +267,7 @@
           <a
             target="_blank"
             href="https://www.instagram.com/sky.robinsonn/"
-            style="background-image: url('/assets/pfps/skylar.jpeg'); background-position: 35% 50%">
+            style="background-image: url('/assets/pfps/skylar.jpeg'); background-position: 40% 70%">
             <div class="person-info">
               <div class="person-name">Skylar Robinson</div>
               <div class="person-role">
