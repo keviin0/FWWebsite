@@ -8,6 +8,7 @@
 	import Trailer from '$lib/components/Trailer.svelte';
 	import Credits from '$lib/components/Credits.svelte';
 	import Footer from '$lib/components/Footer.svelte';
+    import Spacer from '$lib/components/Spacer.svelte';
 
 	let animation;
 
@@ -21,9 +22,10 @@
 
 <About/>
 <Trailer/>
+<Spacer />
 <Credits/>
+<Spacer />
 <Footer/>
-<slot />
 <!--
 {#if !animation}
 	<Intro/>
