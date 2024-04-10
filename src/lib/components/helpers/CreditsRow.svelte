@@ -141,7 +141,7 @@
         <div class="card">
           <a
             target="_blank"
-            href
+            href="https://www.linkedin.com/in/jessica-xu-bb3ab2237"
             style="background-image: url('/assets/pfps/jessica.jpg')">
             <div class="person-info">
               <div class="person-name">Jessica (Tobi) Xu</div>
