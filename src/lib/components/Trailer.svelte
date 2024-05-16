@@ -7,7 +7,7 @@
   let trailer_video = "/assets/fwtrailer.mp4";
 
   let imageNamePattern = "p";
-  let imageExtension = ".png";
+  let imageExtension = ".avif";
   let totalImages = 10;
   let images = [];
 

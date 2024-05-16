@@ -38,7 +38,7 @@
     }
   });
 
-  let logo = "/assets/free_will_logo_glitch_red.png";
+  let logo = "/assets/free_will_logo_glitch_red.avif";
   let scrollDown = "/assets/scroll.svg";
 </script>
 
@@ -538,6 +538,9 @@
       </a>
     </div>
   </div>
+  <!-- <div id="awards-container">
+    <img id="expo-award" src="/assets/ExpoAward.avif" alt="expoaward" />
+  </div> -->
 
   <img class="fade-in" id="scroll-down" alt="scroll down" src={scrollDown} />
 </div>
@@ -548,6 +551,11 @@
   a {
     text-decoration: none;
   }
+
+  /* #expo-award {
+    width: 50%;
+    height: auto;
+  } */
 
   #about-container {
     display: flex;
