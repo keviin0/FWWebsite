@@ -538,9 +538,9 @@
       </a>
     </div>
   </div>
-  <!-- <div id="awards-container">
+  <div id="awards-container">
     <img id="expo-award" src="/assets/ExpoAward.avif" alt="expoaward" />
-  </div> -->
+  </div>
 
   <img class="fade-in" id="scroll-down" alt="scroll down" src={scrollDown} />
 </div>
@@ -552,10 +552,17 @@
     text-decoration: none;
   }
 
-  /* #expo-award {
+  #expo-award {
     width: 50%;
     height: auto;
-  } */
+  }
+
+  #awards-container {
+    margin: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
   #about-container {
     display: flex;
