@@ -5,7 +5,7 @@
 
   const people = {
     Director: [
-      { name: 'Celine Tang', role: 'as/ Designer/ Lead Writer', link: 'https://twitter.com/AMeowdy', image: '/assets/pfps/celine.avif', position: '35% 50%' }
+      { name: 'Celine Tang', role: 'Director/ Designer/ Lead Writer', link: 'https://twitter.com/AMeowdy', image: '/assets/pfps/celine.avif', position: '35% 50%' }
     ],
     Producer: [
       { name: 'Lena Jeon', role: 'Producer/ Lead Artist', link: 'https://l-jeon.github.io/portfolio/', image: '/assets/pfps/lena.avif', position: '35% 50%' }
