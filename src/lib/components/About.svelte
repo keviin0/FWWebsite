@@ -539,7 +539,7 @@
     </div>
   </div>
   <div id="awards-container">
-    <img id="expo-award" src="/assets/ExpoAward.avif" alt="expoaward" />
+    <img class="fade-in" id="expo-award" src="/assets/ExpoAward.avif" alt="expoaward" />
   </div>
 
   <img class="fade-in" id="scroll-down" alt="scroll down" src={scrollDown} />
