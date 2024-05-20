@@ -15,55 +15,6 @@
     images.push(`${imageNamePattern}${i}${imageExtension}`);
   }
 
-  const clamp = (num, min, max) => Math.min(Math.max(num, min), max);
-
-  onMount(() => {
-    var circularText = document.querySelector(".context-text p");
-    circularText.innerHTML = circularText.innerText
-      .split("")
-      .map(
-        (char, i) =>
-          `<span style="transform:rotate(${i * 22.5}deg) translate(0, -100%); color: #FFFEE9; position: absolute; font-size: 2.5em; transform-origin: 0px 86px; left: 50%; font-family: DotGothic16, sans-serif;">${char}</span>`
-      )
-      .join("");
-
-    circularText = document.querySelector(".os-text p");
-    circularText.innerHTML = circularText.innerText
-      .split("")
-      .map(
-        (char, i) =>
-          `<span style="transform:rotate(${i * 20}deg) translate(0, -100%); color: #FFFEE9; position: absolute; font-size: 2.5em; transform-origin: 0px 86px; left: 50%; font-family: DotGothic16, sans-serif;">${char}</span>`
-      )
-      .join("");
-
-    addEventListener("scroll", (event) => {
-      updateScrollRotation();
-    });
-  });
-
-  async function updateScrollRotation() {
-    var elements = document.querySelectorAll(".hovering-picture");
-    var topContainer = document.querySelector("#context-container");
-    var bottomContainer = document.querySelector("#os-inner-container");
-
-    if (!elements || !topContainer || !bottomContainer) return;
-
-    var bottomVal = bottomContainer.getBoundingClientRect().bottom;
-    var topVal = topContainer.getBoundingClientRect().top;
-    var scrollPercentage = clamp(
-      (window.innerHeight - topVal) / (bottomVal - topVal),
-      0.6,
-      1.8
-    );
-
-    elements.forEach(function (element) {
-      var translateYValue = 65 - scrollPercentage * 65;
-      var rotateValue = 20 - scrollPercentage * 20;
-
-      element.style.setProperty("--translateY", `${translateYValue}px`);
-      element.style.setProperty("--rotate", `${rotateValue}deg`);
-    });
-  }
 </script>
 
 <div class="wrapper">

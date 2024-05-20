@@ -48,38 +48,6 @@
 
         const hintInterval = setInterval(updateHint, 5030);
 
-        function preloadAssets() {
-            const assetsToPreload = [
-                '/assets/will_sprite.svg',
-                '/assets/windows_logo_white.svg',
-                '/assets/free_will_logo_glitch_red.png',
-                '/assets/FWTrailer_03.mp4',
-                '/assets/screenshots/p1.png',
-                '/assets/screenshots/p2.png',
-                '/assets/screenshots/p3.png',
-                '/assets/screenshots/p4.png',
-                '/assets/screenshots/p5.png',
-                '/assets/screenshots/p6.png',
-                '/assets/screenshots/p7.png',
-                '/assets/screenshots/p8.png',
-                '/assets/screenshots/p9.png',
-                '/assets/screenshots/p10.png'
-            ];
-
-            assetsToPreload.forEach((href) => {
-                let element;
-
-                if (href.endsWith('.mp4')) {
-                    element = document.createElement('video');
-                    element.preload = 'auto';
-                } else {
-                    element = document.createElement('img');
-                }
-                element.src = href;
-            });
-        }
-
-
         async function transition() {
             if (window.introHandlerRef) {
                 document.removeEventListener('keydown', window.introHandlerRef);
@@ -90,7 +58,6 @@
             // Nullify the reference to prevent future attempts to remove already removed listeners
             window.introHandlerRef = null;
             clearInterval(hintInterval);
-            preloadAssets();
             const inputCursor = document.getElementsByClassName('input-cursor')[0];
             const arrow = document.getElementById("arrow");
             arrow.style.opacity = "0";

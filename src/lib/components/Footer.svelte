@@ -768,4 +768,10 @@
   svg:hover {
     color: red;
   }
+
+  @media only screen and (max-width: 632px) {
+    .footer-subtext p {
+      font-size: 1.1em;
+    }
+  }
 </style>
