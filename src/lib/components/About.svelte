@@ -42,10 +42,14 @@
   let scrollDown = "/assets/scroll.svg";
 </script>
 
+<svelte:head>
+  <link fetchpriority="high" rel="preload" href="/assets/free_will_logo_glitch_red.avif" as="image">
+</svelte:head>
+
 <div id="about-container">
   <img id="logo" alt="Free Will Logo" src={logo} />
   <div class="subheader-container fade-in">
-    <span class="subheader-text" id="subheader-date">May 2024</span>
+    <span class="subheader-text" id="subheader-date">Out Now!</span>
     <div id="s-logo-container">
       <a
         title="Free Will Steam Page"
