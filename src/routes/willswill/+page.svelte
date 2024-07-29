@@ -8,7 +8,7 @@
             const userLang = navigator.language || navigator.userLanguage;
             const response = await fetch('./messages.json');
             const messages = await response.json();
-            message = messages[userLang.split('-')[0]] || messages['en']; // Fallback to English if the language is not found
+            message = messages[userLang] || messages['en']; // Fallback to English if the language is not found
         } catch (error) {
             console.error('Error fetching the messages:', error);
             message = 'Error loading message.';
