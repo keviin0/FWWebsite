@@ -5,7 +5,7 @@
     var message = "";
     onMount(async () => {
         try {
-            const userLang = navigator.language || navigator.userLanguage;
+            const userLang = (navigator.language || navigator.userLanguage).toLowerCase();
             const response = await fetch('./messages.json');
             const messages = await response.json();
             message = messages[userLang] || messages['en']; // Fallback to English if the language is not found
