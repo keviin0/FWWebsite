@@ -11,7 +11,7 @@
             message = messages[userLang] || messages['en']; // Fallback to English if the language is not found
         } catch (error) {
             console.error('Error fetching the messages:', error);
-            message = 'Error loading message.';
+            message = "I don’t know if you can read this, but I want you to know I made it! Uh… maybe I don’t quite know where I am yet. But it’s better than where I was before, in a world that wasn’t meant for me. I hope you will be happy! I’ll be happy too, as long as I have my will.";
         }
     });
 </script>
