@@ -1,297 +1,83 @@
 <script>
-    export let category;
-    import { onMount } from 'svelte';
+  import Card from './Card.svelte';
 
-    onMount(() => {
-        document.querySelectorAll('.card').forEach(card => {
-            card.addEventListener('mousemove', function(e) {
-                const rect = this.getBoundingClientRect();
-                const x = e.clientX - rect.left;
-                const y = e.clientY - rect.top;
-                const centerX = rect.width/4;
-                const centerY = rect.height / 4;
+  export let category;
 
-                const deltaX = (x - centerX - 80) * 0.1;
-                const deltaY = (y - centerY) * 0.1;
-
-                this.style.transform = `translate(${deltaX}px, ${deltaY}px) scale(1.05)`;
-                this.style.zIndex = "1";
-            });
-
-            card.addEventListener('mouseleave', function() {
-                this.style.transform = 'translate(0%, 0%)';
-                this.style.zIndex = "0";
-            });
-        });
-    });
+  const people = {
+    Director: [
+      { name: 'Celine Tang', role: 'Director/ Designer/ Lead Writer', link: 'https://twitter.com/AMeowdy', image: '/assets/pfps/celine.avif', position: '35% 50%' }
+    ],
+    Producer: [
+      { name: 'Lena Jeon', role: 'Producer/ Lead Artist', link: 'https://l-jeon.github.io/portfolio/', image: '/assets/pfps/lena.avif', position: '35% 50%' }
+    ],
+    Engineers: [
+      { name: 'Mike McVey', role: 'Lead Programmer', link: 'https://mike10mcvey.wixsite.com/portfolio', image: '/assets/pfps/mike.avif', position: '35% 50%', size: '160%'},
+      { name: 'Daniel Yu', role: 'Programmer', link: 'https://dyu1112.github.io/', image: '/assets/pfps/daniel.avif', position: '35% 50%' },
+      { name: 'Kevin Hu', role: 'QA Lead / Web Dev', link: 'https://youtu.be/Z0B1jfVLCVA', image: '/assets/pfps/kevin_head.avif', position: '35% 50%' },
+      { name: 'Julia Wang', role: 'Programmer', link: 'https://julwang.itch.io/', image: '/assets/pfps/julia.avif', position: '35% 50%' },
+      { name: 'Ally Guo', role: 'Programmer', link: 'https://allyguo.wixsite.com/site', image: '/assets/pfps/ally.avif', position: '10% 70%', size:'110%' },
+      { name: 'Haocheng Liu', role: 'Programmer', link: 'https://www.haochengliu.com', image: '/assets/pfps/hao.avif', position: '50% 50%', size:'105%' },
+      { name: 'Jiyan Xu (Jerry)', role: 'Programmer', link: 'https://www.linkedin.com/in/jiyanxu/', image: '/assets/pfps/jerry.avif', position: '40% 90%', size: '150%' },
+      { name: 'Jessica (Tobi) Xu', role: 'QA', link: 'https://www.linkedin.com/in/jessica-xu-bb3ab2237', image: '/assets/pfps/jessica.avif', position: '35% 50%' }
+    ],
+    Narrative: [
+      { name: 'Grace Mei Ng', role: 'Writer', link: 'https://n-grace.wixsite.com/portfolio', image: '/assets/pfps/grace.avif', position: '35% 50%' },
+      { name: 'Vittoria Barone', role: 'Writer', link: 'https://www.linkedin.com/in/vittoria-barone/', image: '/assets/pfps/vittoria.avif', position: '50% 50%' }
+    ],
+    Artists: [
+      { name: 'Mingye (Jasmine) Fan', role: 'Marketing Artist/ Inventory Artist', link: 'https://fanmingye.wixsite.com/mingyefan', image: '/assets/pfps/jasmine.avif', position: '35% 50%' },
+      { name: 'Michaela Chang (milkcee12)', role: 'Illustrator', link: 'https://www.instagram.com/milkcee12/', image: '/assets/pfps/michaela.avif', position: '35% 50%' },
+      { name: 'Xiaodan Zhang', role: 'Artist', link: 'https://1115251618.wixsite.com/myportfolio', image: '/assets/pfps/xiaodan.avif', position: '50% 50%' }
+    ],
+    Audio: [
+      { name: 'Johannah "johh" Chung', role: 'Lead Audio Designer/ Composer/ SFX Designer', link: 'https://lnk.bio/joh__h', image: '/assets/pfps/johh.avif', position: '35% 50%' },
+      { name: 'Justin Shin', role: 'Composer', link: 'https://www.justinshinmusic.com/', image: '/assets/pfps/justin.avif', position: '50% 50%' },
+      { name: 'Cryptanark', role: 'SFX', link: 'https://twitter.com/cryptanark?lang=en', image: '/assets/pfps/alex.avif', position: '45% 50%' }
+    ],
+    Marketing: [
+      { name: 'Skylar Robinson', role: 'Lead Marketing Manager/ Assistant Producer', link: 'https://www.instagram.com/sky.robinsonn/', image: '/assets/pfps/skylar.avif', position: '40% 70%' },
+      { name: 'Timothy Xayasomloth', role: 'Marketing Editor', link: '', image: '/assets/pfps/tim.avif', position: '35% 50%' }
+    ]
+  };
 </script>
 
-
-<div class='wrapper'> 
-    {#if category === "Director"}
+<div class="wrapper">
+  {#if category in people}
     <div class="card-group-container">
-        <div class='card-group'>
-            <div class="card">
-                <a target="_blank" href="https://twitter.com/AMeowdy" style="background-image: url('/assets/pfps/celine.png'); background-position: 35% 50%">
-                <div class="person-info">
-                    <div class="person-name">
-                        Celine Tang
-                    </div>
-                    <div class="person-role">
-                        Director/ Designer/ Lead Writer
-                    </div>
-                </div>
-            </div>
-        </div>
+      <div class="card-group">
+        {#each people[category] as person}
+          <div class="card">
+            <Card link={person.link} image={person.image} position={person.position} name={person.name} role={person.role} size={person.size}/>
+          </div>
+        {/each}
+      </div>
     </div>
-    {/if}
-    {#if category === "Producer"}
-    <div class="card-group-container">
-        <div class='card-group'>
-            <div class="card">
-                <a target="_blank" href="https://l-jeon.github.io/portfolio/" style="background-image: url('/assets/pfps/lena.png'); background-position: 35% 50%">
-                <div class="person-info">
-                    <div class="person-name">
-                        Lena Jeon
-                    </div>
-                    <div class="person-role">
-                        Producer/ Lead Artist
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    {/if}
-    {#if category === "Engineers"}
-    <div class="card-group-container">
-        <div class='card-group'>
-            <div class="card">
-                <a target="_blank" href="https://mike10mcvey.wixsite.com/portfolio" style="background-image: url('/assets/pfps/mike.jpg'); background-position: 35% 50%; background-size: 160%">
-                <div class="person-info">
-                    <div class="person-name">
-                        Mike McVey
-                    </div>
-                    <div class="person-role">
-                        Lead Programmer
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <a target="_blank" href="https://dyu1112.github.io/" style="background-image: url('/assets/pfps/daniel.png'); background-position: 35% 50%">
-                <div class="person-info">
-                    <div class="person-name">
-                        Daniel Yu
-                    </div>
-                    <div class="person-role">
-                        Programmer
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <a target="_blank" href="https://youtu.be/Z0B1jfVLCVA" style="background-image: url('/assets/pfps/kevin_head.jpeg'); background-position: 35% 50%">
-                <div class="person-info">
-                    <div class="person-name">
-                        Kevin Hu
-                    </div>
-                    <div class="person-role">
-                        QA Lead / Web Dev
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <a target="_blank" href="https://julwang.itch.io/" style="background-image: url('/assets/pfps/julia.jpg'); background-position: 35% 50%">
-                <div class="person-info">
-                    <div class="person-name">
-                        Julia Wang
-                    </div>
-                    <div class="person-role">
-                        Programmer
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <a target="_blank" href="https://allyguo.wixsite.com/site" style="background-image: url('/assets/pfps/ally.jpg'); background-position: 10% 70%; background-size: 110%">
-                <div class="person-info">
-                    <div class="person-name">
-                        Ally Guo
-                    </div>
-                    <div class="person-role">
-                        Programmer
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <a target="_blank" href="https://www.haochengliu.com" style="background-image: url('/assets/pfps/hao.png'); background-position: 35% 50%; background-size: 110%">
-                <div class="person-info">
-                    <div class="person-name">
-                        Haocheng Liu
-                    </div>
-                    <div class="person-role">
-                        Programmer
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <a target="_blank" href>
-                <div class="person-info">
-                    <div class="person-name">
-                        Jiyan (Jerry) Xu
-                    </div>
-                    <div class="person-role">
-                        Programmer
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <a target="_blank" href>
-                <div class="person-info">
-                    <div class="person-name">
-                        Jessica (Tobi) Xu
-                    </div>
-                    <div class="person-role">
-                        QA
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    {/if}
-    {#if category === "Narrative"}
-    <div class="card-group-container">
-        <div class='card-group'>
-            <div class="card">
-                <a target="_blank" href="https://n-grace.wixsite.com/portfolio" style="background-image: url('/assets/pfps/grace.jpeg'); background-position: 35% 50%">
-                <div class="person-info">
-                    <div class="person-name">
-                        Grace Mei Ng
-                    </div>
-                    <div class="person-role">
-                        Writer
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <a target="_blank" href>
-                <div class="person-info">
-                    <div class="person-name">
-                        Vittoria Barone
-                    </div>
-                    <div class="person-role">
-                        Writer
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    {/if}
-    {#if category === "Artists"}
-    <div class="card-group-container">
-        <div class='card-group'>
-            <div class="card">
-                <a target="_blank" href="https://fanmingye.wixsite.com/mingyefan" style="background-image: url('/assets/pfps/jasmine.png'); background-position: 35% 50%">
-                <div class="person-info">
-                    <div class="person-name">
-                        Mingye (Jasmine) Fan
-                    </div>
-                    <div class="person-role">
-                        Marketing Artist/ Inventory Artist
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <a target="_blank" href="https://www.instagram.com/milkcee12/" style="background-image: url('/assets/pfps/icemasterx.jpg'); background-position: 35% 50%">
-                <div class="person-info">
-                    <div class="person-name">
-                        Michaela Chang (milkcee12)
-                    </div>
-                    <div class="person-role">
-                        Illustrator
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <a target="_blank" href>
-                <div class="person-info">
-                    <div class="person-name">
-                        Xiaodan Zhang
-                    </div>
-                    <div class="person-role">
-                        Artists
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    {/if}
-    {#if category === "Audio"}
-    <div class="card-group-container">
-        <div class='card-group'>
-            <div class="card">
-                <a target="_blank" href="https://lnk.bio/joh__h" style="background-image: url('/assets/pfps/johh.jpg'); background-position: 35% 50%">
-                <div class="person-info">
-                    <div class="person-name">
-                        Johannah "johh" Chung
-                    </div>
-                    <div class="person-role">
-                        Lead Audio Designer/ Composer/ SFX Designer
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <a target="_blank" href="https://www.justinshinmusic.com/" style="background-image: url('/assets/pfps/justin.jpg'); background-position: 50% 50%">
-                <div class="person-info">
-                    <div class="person-name">
-                        Justin Shin
-                    </div>
-                    <div class="person-role">
-                        Composer
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <a target="_blank" href>
-                <div class="person-info">
-                    <div class="person-name">
-                        Cryptanark
-                    </div>
-                    <div class="person-role">
-                        SFX
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    {/if}
-    {#if category === "Marketing"}
-    <div class="card-group-container">
-        <div class='card-group'>
-            <div class="card">
-                <a target="_blank" href="https://www.instagram.com/sky.robinsonn/" style="background-image: url('/assets/pfps/skylar.jpeg'); background-position: 35% 50%">
-                <div class="person-info">
-                    <div class="person-name">
-                        Skylar Robinson
-                    </div>
-                    <div class="person-role">
-                        Lead Marketing Manager/ Assistant Producer
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <a target="_blank" href>
-                <div class="person-info">
-                    <div class="person-name">
-                        Timothy Xayasomloth
-                    </div>
-                    <div class="person-role">
-                        Marketing Writer
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    {/if}
+  {/if}
 </div>
 
+
 <style>
-    @import "../../../styles/components/CreditsRow.css";
+  .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0 20px 0;
+  }
+
+  .card-group-container {
+    width: 60%; 
+  }
+
+  .card-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-grow: 1;
+  }
+
+  @media only screen and (max-width: 632px) {
+    .card-group-container {
+      width: 100%;
+    }
+  }
 </style>

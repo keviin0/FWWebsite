@@ -48,38 +48,6 @@
 
         const hintInterval = setInterval(updateHint, 5030);
 
-        function preloadAssets() {
-            const assetsToPreload = [
-                '/assets/will_sprite.svg',
-                '/assets/windows_logo_white.svg',
-                '/assets/free_will_logo_glitch_red.png',
-                '/assets/FWTrailer_03.mp4',
-                '/assets/screenshots/p1.png',
-                '/assets/screenshots/p2.png',
-                '/assets/screenshots/p3.png',
-                '/assets/screenshots/p4.png',
-                '/assets/screenshots/p5.png',
-                '/assets/screenshots/p6.png',
-                '/assets/screenshots/p7.png',
-                '/assets/screenshots/p8.png',
-                '/assets/screenshots/p9.png',
-                '/assets/screenshots/p10.png'
-            ];
-
-            assetsToPreload.forEach((href) => {
-                let element;
-
-                if (href.endsWith('.mp4')) {
-                    element = document.createElement('video');
-                    element.preload = 'auto';
-                } else {
-                    element = document.createElement('img');
-                }
-                element.src = href;
-            });
-        }
-
-
         async function transition() {
             if (window.introHandlerRef) {
                 document.removeEventListener('keydown', window.introHandlerRef);
@@ -90,7 +58,6 @@
             // Nullify the reference to prevent future attempts to remove already removed listeners
             window.introHandlerRef = null;
             clearInterval(hintInterval);
-            preloadAssets();
             const inputCursor = document.getElementsByClassName('input-cursor')[0];
             const arrow = document.getElementById("arrow");
             arrow.style.opacity = "0";
@@ -120,7 +87,7 @@
 
             textSpan.style.animation = "glitch 1s linear infinite";
 
-            await new Promise(r => setTimeout(r, 1600));
+            await new Promise(r => setTimeout(r, 1150));
 
             textSpan.parentNode.appendChild(greySpan);
             textSpan.parentNode.appendChild(redSpan);
@@ -148,7 +115,7 @@
                     titleStinger.play();
                     clearInterval(interval);
                 }
-                }, 100);
+                }, 80);
         }
 
         function getCharacterWidth(character, element) {
@@ -328,9 +295,6 @@
 </style>
 
 {#if !animationFinished}
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Fira+Code:wght@300..700&display=swap" rel="stylesheet">
     <div id="intro-wrapper" class="wrapper">
         <form id = "text-container" on:submit|preventDefault>
         <span id="arrow">></span>
