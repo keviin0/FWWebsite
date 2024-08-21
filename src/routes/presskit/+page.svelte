@@ -35,6 +35,9 @@ import '../styles.css';
           <div style="text-align:center;font-size:1.2em" class="sc-iCfMLu dWTInE sc-furwcr koDMpt"><a href="#Credits"
               style="text-decoration:underline" color="primary.main"
               class="sc-hUpaCq oVjZx sc-jgrJph jeFlcr">Credits</a></div>
+          <div style="text-align:center;font-size:1em" class="sc-iCfMLu dWTInE sc-furwcr koDMpt"><a href="/.."
+              style="text-decoration:underline" color="primary.main"
+              class="sc-hUpaCq oVjZx sc-jgrJph jeFlcr"><b>Return to main site</b></a></div>
         </nav>
         <div class="sc-iCfMLu eHYmdR sc-furwcr kHdrWn sc-dlVxhl dYomGN">
           <div class="sc-iCfMLu dleDOv sc-furwcr lmRYGi">
@@ -195,38 +198,38 @@ import '../styles.css';
               <div class="sc-iCfMLu dWTInE sc-furwcr lmRYGi sc-dlVxhl dYomGN">
                 <div class="sc-iCfMLu dWTInE sc-furwcr lmRYGi sc-dlVxhl bGOaoJ"><a
                     href="https://www.freewillgame.com/assets/screenshots/p1.avif" target="_blank"
-                    class="sc-hAcGzb iIxpXo"><img src="https://www.freewillgame.com/assets/screenshots/p1.avif"
+                    class="sc-hAcGzb iIxpXo"><img src="assets/screenshots/p1.avif"
                       style="width:100%;height:100%" alt="p1" /></a><a
                     href="https://www.freewillgame.com/assets/screenshots/p2.avif" target="_blank"
-                    class="sc-hAcGzb iIxpXo"><img src="https://www.freewillgame.com/assets/screenshots/p2.avif"
+                    class="sc-hAcGzb iIxpXo"><img src="assets/screenshots/p2.avif"
                       style="width:100%;height:100%" alt="p2" /></a></div>
                 <div class="sc-iCfMLu dWTInE sc-furwcr lmRYGi sc-dlVxhl bGOaoJ"><a
                     href="https://www.freewillgame.com/assets/screenshots/p3.avif" target="_blank"
-                    class="sc-hAcGzb iIxpXo"><img src="https://www.freewillgame.com/assets/screenshots/p3.avif"
+                    class="sc-hAcGzb iIxpXo"><img src="assets/screenshots/p3.avif"
                       style="width:100%;height:100%" alt="p3" /></a><a
                     href="https://www.freewillgame.com/assets/screenshots/p4.avif" target="_blank"
-                    class="sc-hAcGzb iIxpXo"><img src="https://www.freewillgame.com/assets/screenshots/p4.avif"
+                    class="sc-hAcGzb iIxpXo"><img src="assets/screenshots/p4.avif"
                       style="width:100%;height:100%" alt="p4" /></a></div>
                 <div class="sc-iCfMLu dWTInE sc-furwcr lmRYGi sc-dlVxhl bGOaoJ"><a
                     href="https://www.freewillgame.com/assets/screenshots/p5.avif" target="_blank"
-                    class="sc-hAcGzb iIxpXo"><img src="https://www.freewillgame.com/assets/screenshots/p5.avif"
+                    class="sc-hAcGzb iIxpXo"><img src="assets/screenshots/p5.avif"
                       style="width:100%;height:100%" alt="p5" /></a><a
                     href="https://www.freewillgame.com/assets/screenshots/p6.avif" target="_blank"
-                    class="sc-hAcGzb iIxpXo"><img src="https://www.freewillgame.com/assets/screenshots/p6.avif"
+                    class="sc-hAcGzb iIxpXo"><img src="assets/screenshots/p6.avif"
                       style="width:100%;height:100%" alt="p6" /></a></div>
                 <div class="sc-iCfMLu dWTInE sc-furwcr lmRYGi sc-dlVxhl bGOaoJ"><a
                     href="https://www.freewillgame.com/assets/screenshots/p7.avif" target="_blank"
-                    class="sc-hAcGzb iIxpXo"><img src="https://www.freewillgame.com/assets/screenshots/p7.avif"
+                    class="sc-hAcGzb iIxpXo"><img src="assets/screenshots/p7.avif"
                       style="width:100%;height:100%" alt="p7" /></a><a
                     href="https://www.freewillgame.com/assets/screenshots/p8.avif" target="_blank"
-                    class="sc-hAcGzb iIxpXo"><img src="https://www.freewillgame.com/assets/screenshots/p8.avif"
+                    class="sc-hAcGzb iIxpXo"><img src="assets/screenshots/p8.avif"
                       style="width:100%;height:100%" alt="p8" /></a></div>
                 <div class="sc-iCfMLu dWTInE sc-furwcr lmRYGi sc-dlVxhl bGOaoJ"><a
                     href="https://www.freewillgame.com/assets/screenshots/p9.avif" target="_blank"
-                    class="sc-hAcGzb iIxpXo"><img src="https://www.freewillgame.com/assets/screenshots/p9.avif"
+                    class="sc-hAcGzb iIxpXo"><img src="assets/screenshots/p9.avif"
                       style="width:100%;height:100%" alt="p9" /></a><a
                     href="https://www.freewillgame.com/assets/screenshots/p10.avif" target="_blank"
-                    class="sc-hAcGzb iIxpXo"><img src="https://www.freewillgame.com/assets/screenshots/p10.avif"
+                    class="sc-hAcGzb iIxpXo"><img src="assets/screenshots/p10.avif"
                       style="width:100%;height:100%" alt="p10" /></a></div>
               </div>
             </div>
