@@ -107,6 +107,10 @@
         </a>
       {/each}
     </div>
+    <p class="section-subtext">
+      For more assets, see our <a href="/presskit">press kit</a>.
+    </p>
+    
   </div>
 </div>
 
