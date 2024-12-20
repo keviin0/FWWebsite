@@ -256,15 +256,15 @@ import '../styles.css';
               <h3 class="sc-giYglK cJIkXg sc-ikJyIC cfkvLO">Color<!-- -->s</h3>
               <div class="sc-iCfMLu dWTInE sc-furwcr lmRYGi sc-dlVxhl cdUZTm">
                 <div style="text-align:center;border:1px solid #00000028;color:#fff"
-                  class="sc-iCfMLu dleDOv sc-furwcr Tjiya"><strong>#080909</strong></div>
+                  class="sc-iCfMLu dleDOv sc-furwcr Tjiya"><strong>#030404</strong></div>
                 <div style="text-align:center;border:1px solid #00000028;color:#fff"
-                  class="sc-iCfMLu dleDOv sc-furwcr fRcbqH"><strong>#383f43</strong></div>
+                  class="sc-iCfMLu dleDOv sc-furwcr fRcbqH"><strong>#41494d</strong></div>
                 <div style="text-align:center;border:1px solid #00000028;color:#000"
-                  class="sc-iCfMLu dleDOv sc-furwcr eVPOWC"><strong>#a29e9b</strong></div>
+                  class="sc-iCfMLu dleDOv sc-furwcr eVPOWC"><strong>#aca9a5</strong></div>
                 <div style="text-align:center;border:1px solid #00000028;color:#000"
-                  class="sc-iCfMLu dleDOv sc-furwcr gvTIZJ"><strong>#fffce7</strong></div>
+                  class="sc-iCfMLu dleDOv sc-furwcr gvTIZJ"><strong>#fffee9</strong></div>
                 <div style="text-align:center;border:1px solid #00000028;color:#fff"
-                  class="sc-iCfMLu dleDOv sc-furwcr hUoVDL"><strong>#fe131a</strong></div>
+                  class="sc-iCfMLu dleDOv sc-furwcr hUoVDL"><strong>#ff0000</strong></div>
               </div>
             </div>
           </div>
