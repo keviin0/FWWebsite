@@ -543,7 +543,9 @@
     </div>
   </div>
   <div id="awards-container">
-    <img class="fade-in" id="expo-award" src="/assets/ExpoAward.avif" alt="expoaward" />
+    <img class="fade-in award" src="/assets/ExpoAward.avif" alt="expoaward" />
+    <img class="fade-in award" src="/assets/bafta.png" alt="baftalonglistaward" />
+    <img class="fade-in award" src="/assets/tokyoindiegames.png" alt="tokyoindiegamesexhibitor" />
   </div>
 
   <img class="fade-in" id="scroll-down" alt="scroll down" src={scrollDown} />
@@ -562,11 +564,20 @@
   }
 
   #awards-container {
-    margin: 2em;
+    width: 70%;
+    margin: 2em auto;
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
   }
+
+  .award {
+    width: 50%;
+    height: auto;
+    max-width: 200px;
+}
 
   #about-container {
     display: flex;
